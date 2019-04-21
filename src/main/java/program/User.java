@@ -10,7 +10,7 @@ public class User {
     private String username;
 
     @DatabaseField(canBeNull = false)
-    private String character;
+    private String sailor_character;
 
     public User() {
 
@@ -18,7 +18,7 @@ public class User {
 
     public User(String username, String character) {
         this.username = username;
-        this.character = character;
+        this.sailor_character = character;
     }
 
 
