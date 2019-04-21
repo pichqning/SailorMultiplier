@@ -25,3 +25,11 @@ hs_err_pid*
 #IntelliJ
 .idea/
 out/
+
+*iml
+bin/
+build/
+
+.settings
+project/
+
