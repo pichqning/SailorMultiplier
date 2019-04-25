@@ -2,9 +2,7 @@ package orm;
 
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
-import com.j256.ormlite.table.TableUtils;
 import program.PropertyManager;
-import program.User;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -43,18 +41,14 @@ public class DatabaseManager {
         return instance;
     }
 
-//    public UserDAO getUserDao() {
-//        if(userDAO == null) {
-//            try {
-//                userDAO = new UserDAO(connection);
-//            } catch (SQLException se){
-//                System.out.println("Cannot connect to ItemDao.");
-//            }
-//        }
-//        return userDAO;
-//    }
-//                TableUtils.createTable(connection, User.class);
-//            User u1 = new User("test1", "pink");
-//            userDAO = new UserDAO(connection);
-//            userDAO.create(u1);
+    public UserDAO getUserDao() {
+        if(userDAO == null) {
+            try {
+                userDAO = new UserDAO(connection);
+            } catch (SQLException se){
+                System.out.println("Cannot connect to ItemDao.");
+            }
+        }
+        return userDAO;
+    }
 }
