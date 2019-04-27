@@ -1,15 +1,20 @@
 package main;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import orm.DatabaseManager;
 import orm.UserDAO;
+import program.ChangePageManager;
+import program.User;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 public class Main extends Application {
 
@@ -23,39 +28,21 @@ public class Main extends Application {
 //        System.out.println("Test username: " + propertyManager.getProperty("jdbc.user"));
 //
 //        db = DatabaseManager.getInstance();
+//        userDAO = db.getUserDao();
+//
+//        List<User> users = userDAO.getColumnList("username");
+//        for(User u: users) {
+//            System.out.println(u);
+//        }
 
         launch(args);
-
 
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         try {
-            Parent root = (Parent) FXMLLoader.load(getClass().getClassLoader().getResource("UI/CreateUserUI.fxml"));
-
-            Scene scene = new Scene(root);
-
-//            root.setOnMousePressed(new EventHandler<MouseEvent>() {
-//                @Override
-//                public void handle(MouseEvent event) {
-//                    x = event.getSceneX();
-//                    y = event.getSceneY();
-//                }
-//            });
-//
-//            root.setOnMouseDragged(new EventHandler<MouseEvent>() {
-//                @Override
-//                public void handle(MouseEvent event) {
-//                    primaryStage.setX(event.getSceneX() - x);
-//                    primaryStage.setY(event.getSceneY() - y);
-//                }
-//            });
-
-            primaryStage.setTitle("Create Test");
-            primaryStage.setScene(scene);
-            primaryStage.sizeToScene();
-            primaryStage.show();
+            ChangePageManager.changePage(Main.class, primaryStage, "/UI/LoginUI.fxml", "Login");
 
         }catch (Exception e){
             e.printStackTrace();

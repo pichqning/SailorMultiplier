@@ -21,5 +21,19 @@ public class User {
         this.sailor_character = character;
     }
 
+    public String getUsername() {
+        return username;
+    }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getSailor_character() {
+        return sailor_character;
+    }
+
+    public void setSailor_character(String sailor_character) {
+        this.sailor_character = sailor_character;
+    }
 }

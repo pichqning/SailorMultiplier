@@ -1,0 +1,24 @@
+#usernameLabel {
+    -fx-border-color: blue;
+    -fx-border-width: 2;
+}
+
+#createUserButton{
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-border-color: #F7EF5D;
+    -fx-font-size: 1em; /* 12 */
+    -fx-text-fill: #F4197C;
+}
+
+#createUserButton:focused {
+    -fx-border-color: transparent, black;
+    -fx-border-width: 1, 1;
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+#createUserButton:pressed {
+    -fx-background-color: #F4197C;
+    -fx-text-fill: #F7EF5D;
+}

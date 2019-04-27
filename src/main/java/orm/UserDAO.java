@@ -15,21 +15,49 @@ public class UserDAO extends BaseDaoImpl<User, String> {
         super(connection, User.class);
     }
 
-    public List<User> searchByColumnName(String tableColumn, String search){
+    public List<User> getColumnListByKey(String tableColumn, String search){
         QueryBuilder<User, String> qb = this.queryBuilder();
-        List<User> UserList = null;
+        List<User> userList = null;
 
         try {
-            UserList = qb.where().eq(tableColumn, search).query();
+            userList = qb.where().eq(tableColumn, search).query();
         } catch (SQLException se){
-            System.out.println("Cannot search in sales data.");
+            System.out.println("Cannot search in users table.");
         }
 
-        return UserList;
+        return userList;
     }
 
     public void getSailorCharactor(String username) {
         // QueryBuilder<User, String> qb = this.queryBuilder();
+    }
+
+    public List<User> getColumnList(String col) {
+        QueryBuilder<User, String> qb = this.queryBuilder();
+        List<User> userList = null;
+
+        try {
+            userList = qb.query();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return userList;
+    }
+
+    public User getUserFromUsername(String search) {
+        QueryBuilder<User, String> qb = this.queryBuilder();
+        List<User> userList = null;
+        User user = null;
+        try {
+            userList = qb.query();
+            for(User u: userList) {
+                if(u.getUsername().equals(search)) user = u;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return user;
     }
 
 }
