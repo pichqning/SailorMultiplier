@@ -13,11 +13,15 @@ public class Timer{
         this.second = second;
     }
 
-    public void start() throws InterruptedException {
+    public void start()   {
         for (int i = second ; i >= 0 ; i-- ){
-            Thread.sleep(1000);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            
         }
-
     }
 }
 
