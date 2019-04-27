@@ -49,5 +49,10 @@ public class Game {
         choiceList.clear();
     }
 
-
+    /**
+     * Get highscore from database
+     * */
+    public void selectHighscore() {
+        // 
+    }
 }
