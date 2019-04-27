@@ -13,8 +13,6 @@ public class Game {
     private List<Question> questionList;
     private List<Integer> choiceList;
     private int multiplier;
-    int correct = 0;
-    int wrong = 0;
 
     public Game(int multiplier) {
         this.answerList = new ArrayList<>();
@@ -37,14 +35,6 @@ public class Game {
 
     public int getMultiplier() {
         return multiplier;
-    }
-
-    public int getCorrect() {
-        return correct;
-    }
-
-    public int getWrong() {
-        return wrong;
     }
 
     /**
