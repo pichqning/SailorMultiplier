@@ -7,8 +7,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import orm.DatabaseManager;
 import orm.HighscoreDAO;
+import program.ChangePageManager;
 import program.Highscore;
 import program.User;
 
@@ -27,6 +29,8 @@ public class SelectQuestionController {
     private HighscoreDAO highscoreDAO;
     private User user;
 
+    private static String id;
+
     @FXML
     private void initialize() {
         db = DatabaseManager.getInstance();
@@ -40,6 +44,9 @@ public class SelectQuestionController {
     private void handleHighScoreButton(ActionEvent e) {
         Button buttonClick = (Button) e.getSource();
         buttonClick.setText("Start");
+        id = splitButtonName(buttonClick.getId());
+        Stage stage = new Stage();
+        ChangePageManager.changePage(SelectQuestionController.class, stage, "/UI/GameUI.fxml");
     }
 
     private void setHighScoreToButton() {
@@ -59,5 +66,13 @@ public class SelectQuestionController {
     private String setTextButton(int id) {
         return String.format("%s \n High Score: %d", highscoreDAO.getListFromColumn("multiplier", id).get(0).getUsername(),
                 highscoreDAO.getListFromColumn("multiplier", id).get(0).getScore());
+    }
+
+    private String splitButtonName(String id) {
+        return id.substring(1);
+    }
+
+    public static String getId() {
+        return id;
     }
 }

@@ -17,5 +17,6 @@
       <TextField fx:id="usernameInput" layoutX="667.0" layoutY="207.0" prefHeight="27.0" prefWidth="277.0" />
       <Button fx:id="submitCreateButton" layoutX="734.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleSubmitCreateButton" text="Submit" />
       <ComboBox fx:id="selectSailor" layoutX="571.0" layoutY="252.0" onAction="#handleSailorSelect" prefWidth="150.0" />
+      <Button fx:id="backButton" layoutX="930.0" layoutY="463.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="45.0" prefWidth="86.0" text="Back" />
    </children>
 </AnchorPane>

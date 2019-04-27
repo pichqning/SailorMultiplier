@@ -4,11 +4,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import orm.DatabaseManager;
 import orm.HighscoreDAO;
 import orm.UserDAO;
-import program.Highscore;
-import program.User;
+import program.ChangePageManager;
 
 import java.sql.SQLException;
 
@@ -21,7 +21,7 @@ public class CreateUserController {
     ComboBox selectSailor;
 
     @FXML
-    Button submitCreateButton;
+    Button submitCreateButton, backButton;
 
     private String sailorColor = "";
     private String username = "";
@@ -29,6 +29,7 @@ public class CreateUserController {
     private DatabaseManager db;
     private UserDAO userDAO;
     private HighscoreDAO highscoreDAO;
+    private Stage stage;
 
     @FXML
     private void initialize() {
@@ -36,6 +37,11 @@ public class CreateUserController {
         userDAO = db.getUserDao();
         highscoreDAO = db.getHighscoreDAO();
         addSailorToCombobox();
+    }
+
+    @FXML
+    private void handleBackButton() {
+        setBackAction();
     }
 
     public void addSailorToCombobox() {
@@ -55,10 +61,14 @@ public class CreateUserController {
         if(checkTextNotEmpty()) {
             username = usernameInput.getText().trim();
             sailorColor = selectSailor.getSelectionModel().getSelectedItem().toString();
-//            User user = new User(username, sailorColor);
-//            userDAO.create(user);
             userDAO.createUser(username, sailorColor);
+            setBackAction();
         }
+    }
+
+    public void setBackAction() {
+        stage = new Stage();
+        ChangePageManager.changePage(ChangePageManager.class, stage, "/UI/LoginUI.fxml");
     }
 
     public boolean checkTextNotEmpty() {

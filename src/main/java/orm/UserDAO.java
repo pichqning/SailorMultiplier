@@ -66,4 +66,12 @@ public class UserDAO extends BaseDaoImpl<User, String> {
 
     }
 
+    public void deleteUser(String username) {
+        try {
+            this.delete(getUserFromUsername(username));
+        } catch (SQLException e) {
+            System.out.println("Cannot create user");
+        }
+    }
+
 }

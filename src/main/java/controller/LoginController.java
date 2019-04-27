@@ -24,7 +24,7 @@ public class LoginController {
     private TableView<User> showUsername;
 
     @FXML
-    private Button loginButton;
+    private Button loginButton, deleteUserButton;
 
     private ObservableList<User> observableList = null;
 
@@ -34,7 +34,8 @@ public class LoginController {
 
     private static User userLogin;
 
-    private String usernameToLogin = "";
+    private String usernameToLogin = "", usernameToDelete = "";
+    private Stage stage;
 
     @FXML
     private void initialize() {
@@ -47,20 +48,28 @@ public class LoginController {
 
     @FXML
     private void handleLoginButton() {
+        if(checkChosenUser()){
         observableList = showUsername.getSelectionModel().getSelectedItems();
         usernameToLogin = observableList.get(0).getUsername();
-        System.out.println(usernameToLogin);
-        if(checkChosenUser()){
             userLogin = userDAO.getUserFromUsername(usernameToLogin);
             Stage stage = new Stage();
-            ChangePageManager.changePage(LoginController.class, stage, "/UI/SelectQuestionUI.fxml", "Question");
+            ChangePageManager.changePage(LoginController.class, stage, "/UI/SelectQuestionUI.fxml");
         }
     }
 
     @FXML
     private void handleCreateUserButton(){
-        Stage stage = new Stage();
-        ChangePageManager.changePage(LoginController.class, stage, "/UI/CreateUserUI.fxml", "Register");
+        stage = new Stage();
+        ChangePageManager.changePage(LoginController.class, stage, "/UI/CreateUserUI.fxml");
+    }
+
+    @FXML
+    private void handleDeleteUserButton() {
+        observableList = showUsername.getSelectionModel().getSelectedItems();
+        usernameToDelete = observableList.get(0).getUsername();
+        userDAO.deleteUser(usernameToDelete);
+        stage = new Stage();
+        ChangePageManager.changePage(LoginController.class, stage, "/UI/LoginUI.fxml");
     }
 
     public void showUsernameList() {
@@ -74,7 +83,7 @@ public class LoginController {
     }
 
     private boolean checkChosenUser(){
-        if(usernameToLogin.equals("")) {
+        if(showUsername.getSelectionModel().getSelectedItems().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setContentText("Please, choose user for login");
