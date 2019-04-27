@@ -1,25 +1,20 @@
 package main;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import orm.DatabaseManager;
+import orm.HighscoreDAO;
 import orm.UserDAO;
 import program.ChangePageManager;
-import program.User;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.List;
 
 public class Main extends Application {
 
     private static DatabaseManager db;
     private static UserDAO userDAO;
+    private static HighscoreDAO highscoreDAO;
 
     private double x,y;
 
@@ -27,12 +22,9 @@ public class Main extends Application {
 //        PropertyManager propertyManager = PropertyManager.getInstance();
 //        System.out.println("Test username: " + propertyManager.getProperty("jdbc.user"));
 //
-//        db = DatabaseManager.getInstance();
-//        userDAO = db.getUserDao();
-//
+
 
         launch(args);
-
     }
 
     @Override

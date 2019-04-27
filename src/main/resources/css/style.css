@@ -23,3 +23,14 @@
     -fx-background-color: #F4197C;
     -fx-text-fill: #F7EF5D;
 }
+
+#highScoreButton {
+    -fx-background-color: red;
+}
+
+#highScoreButton:hover{
+
+    -fx-background-color:#64EE64;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-text-alignment: center;
+}

@@ -2,6 +2,7 @@ package orm;
 
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
+import program.Highscore;
 import program.PropertyManager;
 
 import java.io.IOException;
@@ -14,6 +15,8 @@ public class DatabaseManager {
     private ConnectionSource connection;
 
     private UserDAO userDAO;
+
+    private HighscoreDAO highscoreDAO;
 
     public DatabaseManager() {
         PropertyManager propertyManager = null;
@@ -46,9 +49,21 @@ public class DatabaseManager {
             try {
                 userDAO = new UserDAO(connection);
             } catch (SQLException se){
-                System.out.println("Cannot connect to ItemDao.");
+                System.out.println("Cannot connect to UserDao.");
             }
         }
         return userDAO;
     }
+
+    public HighscoreDAO getHighscoreDAO() {
+        if(highscoreDAO == null) {
+            try {
+                highscoreDAO = new HighscoreDAO(connection);
+            } catch (SQLException se) {
+                System.out.println("Cannot connect to HighscoreDao.");
+            }
+        }
+        return highscoreDAO;
+    }
+
 }

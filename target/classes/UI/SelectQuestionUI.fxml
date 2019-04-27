@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SelectQuestionController">
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SelectQuestionController">
    <children>
-      <Label fx:id="usernameLabel" layoutX="116.0" layoutY="184.0" text="Username" />
+      <Label fx:id="usernameLogin" layoutX="413.0" layoutY="45.0" text="username">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="18.0" prefHeight="605.0" prefWidth="341.0">
+         <children>
+            <Button fx:id="h2" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
+            <Button fx:id="h3" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
+            <Button fx:id="h4" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
+            <Button fx:id="h5" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
+            <Button fx:id="h6" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
+            <Button fx:id="h7" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
+            <Button fx:id="h8" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
+            <Button fx:id="h9" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
+            <Button fx:id="h10" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
+            <Button fx:id="h11" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
+            <Button fx:id="h12" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

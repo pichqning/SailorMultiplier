@@ -8,8 +8,8 @@ public class HighscorePool {
 
     public HighscorePool () {
         for (int i = 2 ; i <= 12 ; i++) {
-            Highscore h = new Highscore(i,0);
-            highscores.add(h);
+//            Highscore h = new Highscore(i,0);
+//            highscores.add(h);
         }
     }
 
@@ -43,8 +43,8 @@ public class HighscorePool {
     public void updatePool () {
         highscores.clear();
         for (int i = 2 ; i <= 12 ; i++) {
-            Highscore h = new Highscore(i,0);
-            highscores.add(h);
+//            Highscore h = new Highscore(i,0);
+//            highscores.add(h);
         }
     }
 }

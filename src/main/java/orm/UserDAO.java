@@ -57,4 +57,13 @@ public class UserDAO extends BaseDaoImpl<User, String> {
         return user;
     }
 
+    public void createUser(String username, String sailor) {
+        try {
+            this.create(new User(username, sailor));
+        } catch (SQLException e) {
+            System.out.println("Cannot create user");
+        }
+
+    }
+
 }
