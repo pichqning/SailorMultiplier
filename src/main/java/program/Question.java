@@ -1,3 +1,5 @@
+package program;
+
 import java.util.Random;
 
 public class Question {
