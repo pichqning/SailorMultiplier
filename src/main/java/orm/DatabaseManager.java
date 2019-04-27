@@ -20,7 +20,7 @@ public class DatabaseManager {
         try {
             propertyManager = PropertyManager.getInstance();
         } catch (IOException e) {
-
+            e.printStackTrace();
         }
         String url = propertyManager.getProperty("jdbc.url");
 

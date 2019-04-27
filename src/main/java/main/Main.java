@@ -30,10 +30,6 @@ public class Main extends Application {
 //        db = DatabaseManager.getInstance();
 //        userDAO = db.getUserDao();
 //
-//        List<User> users = userDAO.getColumnList("username");
-//        for(User u: users) {
-//            System.out.println(u);
-//        }
 
         launch(args);
 

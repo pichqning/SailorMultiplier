@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class ChangePageManager {
+
     public static void changePage(Class c, Stage stage, String path, String title) {
         try {
             Parent root = (Parent) FXMLLoader.load(c.getClass().getResource(path));

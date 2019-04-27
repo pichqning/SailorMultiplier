@@ -10,7 +10,6 @@ import program.User;
 
 import java.sql.SQLException;
 
-
 public class CreateUserController {
 
     @FXML

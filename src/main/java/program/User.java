@@ -36,4 +36,5 @@ public class User {
     public void setSailor_character(String sailor_character) {
         this.sailor_character = sailor_character;
     }
+
 }

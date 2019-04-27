@@ -28,9 +28,6 @@ public class UserDAO extends BaseDaoImpl<User, String> {
         return userList;
     }
 
-    public void getSailorCharactor(String username) {
-        // QueryBuilder<User, String> qb = this.queryBuilder();
-    }
 
     public List<User> getColumnList(String col) {
         QueryBuilder<User, String> qb = this.queryBuilder();

@@ -25,5 +25,4 @@ public class SelectQuestionController {
         usernameLabel.setText(user.getUsername());
     }
 
-
 }
