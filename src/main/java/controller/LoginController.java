@@ -32,7 +32,7 @@ public class LoginController {
 
     private UserDAO userDAO;
 
-    private static User userLogin;
+    private static User userLogin = null;
 
     private String usernameToLogin = "", usernameToDelete = "";
     private Stage stage;
@@ -96,4 +96,5 @@ public class LoginController {
     public static User getUser() {
         return userLogin;
     }
+
 }

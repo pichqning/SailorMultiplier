@@ -28,5 +28,6 @@
             <Button fx:id="h12" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
          </children>
       </VBox>
+      <Button fx:id="logoutButton" layoutX="918.0" layoutY="578.0" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="27.0" prefWidth="86.0" text="Logout" />
    </children>
 </AnchorPane>

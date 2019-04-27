@@ -26,7 +26,6 @@ public class PropertyManager {
             }
         }
         return instance;
-
     }
 
     private void loadProperties() {

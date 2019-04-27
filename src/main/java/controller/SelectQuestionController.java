@@ -17,7 +17,7 @@ import program.User;
 public class SelectQuestionController {
 
     @FXML
-    private Button h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12;
+    private Button h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, logoutButton;
 
     @FXML
     private AnchorPane pane;
@@ -25,9 +25,11 @@ public class SelectQuestionController {
     @FXML
     private Label usernameLogin;
 
+
     private DatabaseManager db;
     private HighscoreDAO highscoreDAO;
     private User user;
+    private Stage stage;
 
     private static String id;
 
@@ -45,8 +47,14 @@ public class SelectQuestionController {
         Button buttonClick = (Button) e.getSource();
         buttonClick.setText("Start");
         id = splitButtonName(buttonClick.getId());
-        Stage stage = new Stage();
+        stage = new Stage();
         ChangePageManager.changePage(SelectQuestionController.class, stage, "/UI/GameUI.fxml");
+    }
+
+    @FXML
+    private void handleLogoutButton() {
+        stage = new Stage();
+        ChangePageManager.changePage(SelectQuestionController.class, stage, "/UI/LoginUI.fxml");
     }
 
     private void setHighScoreToButton() {
