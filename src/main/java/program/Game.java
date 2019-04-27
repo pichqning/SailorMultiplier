@@ -5,24 +5,23 @@ import program.Question;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Create Game for Each Multiplier
+ */
 public class Game {
     private List<Answer> answerList;
     private List<Question> questionList;
-    private List<Integer> highScoreList;
     private List<Integer> choiceList;
     private int multiplier;
     int correct = 0;
     int wrong = 0;
-    private HighscorePool highscorePool;
 
     public Game(int multiplier) {
         this.answerList = new ArrayList<>();
         this.questionList = new ArrayList<>();
-        this.highScoreList = new ArrayList<>();
         this.choiceList = new ArrayList<>();
         this.multiplier = multiplier;
-//        this.highscorePool = HighscorePool.getInstance();
-    }
+   }
 
     public List<Answer> getAnswerList() {
         return answerList;
@@ -30,10 +29,6 @@ public class Game {
 
     public List<Question> getQuestionList() {
         return questionList;
-    }
-
-    public List<Integer> getHighScoreList() {
-        return highScoreList;
     }
 
     public List<Integer> getChoiceList() {
@@ -58,14 +53,16 @@ public class Game {
     public void addQuestion () {
         Question q = new Question(multiplier);
         questionList.add(q);
-        addAnswer(q);
+        this.addAnswer(q);
     }
 
     /**
      * add answer for checking.
      * */
     public void addAnswer (Question q) {
-        answerList.add(q.creatAnswer());
+        Answer a = q.creatAnswer();
+        answerList.add(a);
+        this.addChoice(a);
     }
 
     /**
@@ -85,15 +82,8 @@ public class Game {
         choiceList.clear();
     }
 
-    /**
-     * Get highscore from database
-     * */
-    public void addHighscore() {
-        for (int i = 2 ; i <= 12 ; i++) {
-            int sc = highscorePool.getHighscoreIndiv(i).getScore();
-            highScoreList.add(sc);
-        }
-    }
+
+
 
 
 
