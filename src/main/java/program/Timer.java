@@ -1,8 +1,7 @@
 package program;
 
-import java.util.Observable;
 
-public class Timer {
+public class Timer{
     private int second ;
     private boolean canPlay;
 
@@ -18,7 +17,6 @@ public class Timer {
         for (int i = second ; i >= 0 ; i-- ){
             Thread.sleep(1000);
         }
-
 
     }
 }
