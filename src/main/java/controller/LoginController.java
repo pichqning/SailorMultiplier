@@ -28,7 +28,7 @@ public class LoginController {
     private TableView<User> showUsername;
 
     @FXML
-    private Button loginButton, deleteUserButton;
+    private Button loginButton, deleteUserButton, createUserButton;
 
     private ObservableList<User> observableList = null;
 
@@ -46,6 +46,7 @@ public class LoginController {
         db = DatabaseManager.getInstance();
         userDAO = db.getUserDao();
         showUsername.setItems(null);
+        createUserButton.setText("CREATE\nSAILOR");
         showUsernameList();
         observableList = null;
     }

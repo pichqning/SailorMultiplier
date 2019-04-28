@@ -3,35 +3,49 @@
 }
 
 
-#createUserButton{
-    -fx-background-radius: 0;
-    -fx-background-color: #F7EF5D;
-    -fx-border-color: #F7EF5D;
-    -fx-font-size: 1em; /* 12 */
-    -fx-text-fill: #F4197C;
-}
 
-#createUserButton:focused {
-    -fx-border-color: transparent, black;
-    -fx-border-width: 1, 1;
-    -fx-border-radius: 0, 0;
-    -fx-border-insets: 1 1 1 1, 0;
-}
-
-#createUserButton:pressed {
-    -fx-background-color: #F4197C;
-    -fx-text-fill: #F7EF5D;
-}
-
+/*login page*/
 #loginPane {
-    /*-fx-background-color: linear-gradient(to top, #ff62a5, #f5c7f7);*/
-    -fx-background-image: url("/images/pretty-cure!-wallpapers.jpg");
+    -fx-background-image: url("/images/rainbow_background.jpg");
     -fx-background-position: center center;
     -fx-background-size: 1080 640;
 }
 
-#showUsername{
-    -fx-background-color: transparent;
+#createUserButton{
+    -fx-font-family: 'Quite Magical';
+    -fx-background-color: #33313b;
+    -fx-font-size: 18px;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #33313b;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+    -fx-background-radius: 22;
+}
+
+#createUserButton:hover {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #33313b;
+    -fx-text-fill: #33313b;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+    -fx-background-radius: 22;
+    -fx-rotate: 10;
+}
+
+#deleteUserButton {
+    -fx-font-family: 'Quite Magical';
+    -fx-background-color: #8f1537;
+    -fx-font-size: 17px;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+#deleteUserButton:hover {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #8f1537;
+    -fx-text-fill: #8f1537;
+    -fx-border-radius: 10;
 }
 
 .table-row-cell:selected{
@@ -43,15 +57,17 @@
 }
 
 .table-view .column-header .label {
-    -fx-text-fill: #2AC3E8;
+    -fx-text-fill: #ffffff;
     -fx-font-weight: bold;
+    -fx-background-color: #006BA5;
+    -fx-font-size: 32px;
 }
 
 #usernameCol {
-    -fx-background-color: transparent;
     -fx-font-family: 'Quite Magical';
     -fx-font-size: 27px;
     -fx-alignment: center;
+    -fx-text-fill: #5768E4;
 }
 
 #highScoreButton {
@@ -63,5 +79,40 @@
     -fx-background-color:#64EE64;
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
     -fx-text-alignment: center;
+}
+
+#createUserButton {
+}
+
+#loginButton {
+    -fx-font-family: 'Quite Magical';
+    -fx-font-weight: bold;
+    -fx-background-color: #ff78ae;
+    -fx-background-radius: 22;
+    -fx-font-size: 27;
+    -fx-text-fill: #ffffff;
+}
+
+#loginButton:hover {
+    -fx-font-weight: bold;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-font-size: 27;
+    -fx-text-fill: #ff78ae;
+    -fx-border-color: #ff78ae;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+}
+
+#loginButton:pressed {
+    -fx-font-weight: bold;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-font-size: 27;
+    -fx-text-fill: #ff78ae;
+    -fx-border-color: #ff78ae;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+    -fx-rotate: 5;
 }
 

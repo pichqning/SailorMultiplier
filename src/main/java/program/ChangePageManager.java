@@ -3,7 +3,6 @@ package program;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class ChangePageManager {
@@ -12,6 +11,7 @@ public class ChangePageManager {
         try {
             Parent root = (Parent) FXMLLoader.load(c.getClass().getResource(path));
             Scene scene = new Scene(root);
+            stage.setResizable(false);
             scene.getStylesheets().add("css/style.css");
             stage.setScene(scene);
             stage.setTitle("Sailor Multiplier");
