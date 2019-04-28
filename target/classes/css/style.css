@@ -1,12 +1,11 @@
-#usernameLabel {
-    -fx-border-color: blue;
-    -fx-border-width: 2;
+@font-face {
+    src: url("../font/QuiteMagical.ttf");
 }
 
 
 #createUserButton{
     -fx-background-radius: 0;
-    -fx-background-color: transparent;
+    -fx-background-color: #F7EF5D;
     -fx-border-color: #F7EF5D;
     -fx-font-size: 1em; /* 12 */
     -fx-text-fill: #F4197C;
@@ -24,6 +23,37 @@
     -fx-text-fill: #F7EF5D;
 }
 
+#loginPane {
+    /*-fx-background-color: linear-gradient(to top, #ff62a5, #f5c7f7);*/
+    -fx-background-image: url("/images/pretty-cure!-wallpapers.jpg");
+    -fx-background-position: center center;
+    -fx-background-size: 1080 640;
+}
+
+#showUsername{
+    -fx-background-color: transparent;
+}
+
+.table-row-cell:selected{
+    -fx-background-color: #2AC3E8;
+}
+
+.table-row-cell:hover{
+    -fx-background-color: #2AC3E8;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #2AC3E8;
+    -fx-font-weight: bold;
+}
+
+#usernameCol {
+    -fx-background-color: transparent;
+    -fx-font-family: 'Quite Magical';
+    -fx-font-size: 27px;
+    -fx-alignment: center;
+}
+
 #highScoreButton {
     -fx-background-color: red;
 }
@@ -34,3 +64,4 @@
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
     -fx-text-alignment: center;
 }
+

@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import orm.DatabaseManager;
 import orm.UserDAO;
@@ -18,7 +19,10 @@ import program.User;
 public class LoginController {
 
     @FXML
-    private TableColumn<User, String> username;
+    private AnchorPane loginPane;
+
+    @FXML
+    private TableColumn<User, String> usernameCol;
 
     @FXML
     private TableView<User> showUsername;
@@ -51,6 +55,7 @@ public class LoginController {
         if(checkChosenUser()){
         observableList = showUsername.getSelectionModel().getSelectedItems();
         usernameToLogin = observableList.get(0).getUsername();
+
             userLogin = userDAO.getUserFromUsername(usernameToLogin);
             Stage stage = new Stage();
             ChangePageManager.changePage(LoginController.class, stage, "/UI/SelectQuestionUI.fxml");
@@ -78,8 +83,9 @@ public class LoginController {
             observableList.add(u);
         }
 
-        username.setCellValueFactory(new PropertyValueFactory<>("username"));
+        usernameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
         showUsername.setItems(observableList);
+        usernameCol.setResizable(false);
     }
 
     private boolean checkChosenUser(){

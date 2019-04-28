@@ -5,15 +5,15 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+<AnchorPane fx:id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
-      <TableView fx:id="showUsername" layoutX="338.0" layoutY="143.0" prefHeight="306.0" prefWidth="391.0">
+      <TableView fx:id="showUsername" layoutX="338.0" layoutY="112.0" prefHeight="313.0" prefWidth="391.0">
         <columns>
-          <TableColumn fx:id="username" prefWidth="390.0" text="Username" />
+          <TableColumn fx:id="usernameCol" prefWidth="390.0" text="WHO ARE YOU??" />
         </columns>
       </TableView>
       <Button fx:id="loginButton" layoutX="442.0" layoutY="529.0" mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="58.0" prefWidth="224.0" text="Submit" />
-      <Button fx:id="createUserButton" layoutX="338.0" layoutY="457.0" mnemonicParsing="false" onAction="#handleCreateUserButton" text="Create Your Sailor+" />
-      <Button fx:id="deleteUserButton" layoutX="338.0" layoutY="492.0" mnemonicParsing="false" onAction="#handleDeleteUserButton" text="Delete" />
+      <Button fx:id="createUserButton" layoutX="338.0" layoutY="457.0" mnemonicParsing="false" onAction="#handleCreateUserButton" text="CREATE YOUR SAILOR" />
+      <Button fx:id="deleteUserButton" layoutX="338.0" layoutY="492.0" mnemonicParsing="false" onAction="#handleDeleteUserButton" text="ELIMINATE SAILOR" />
    </children>
 </AnchorPane>
