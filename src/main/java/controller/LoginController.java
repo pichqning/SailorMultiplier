@@ -3,6 +3,10 @@ package controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -10,10 +14,14 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import main.Main;
 import orm.DatabaseManager;
 import orm.UserDAO;
 import program.ChangePageManager;
 import program.User;
+
+import java.awt.event.ActionEvent;
+import java.io.IOException;
 
 
 public class LoginController {
@@ -59,14 +67,22 @@ public class LoginController {
 
             userLogin = userDAO.getUserFromUsername(usernameToLogin);
             Stage stage = new Stage();
-            ChangePageManager.changePage(LoginController.class, stage, "/UI/SelectQuestionUI.fxml");
+            ChangePageManager.setUI(this.getClass(), "/UI/SelectQuestionUI.fxml");
         }
     }
 
     @FXML
-    private void handleCreateUserButton(){
-        stage = new Stage();
-        ChangePageManager.changePage(LoginController.class, stage, "/UI/CreateUserUI.fxml");
+    private void handleCreateUserButton() throws IOException {
+//        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        stage = new Stage();
+//        ChangePageManager.changePage(LoginController.class, stage, "/UI/CreateUserUI.fxml");
+
+//        ChangePageManager.changeUI("UI/CreateUserUI.fxml", loginPane);
+//        Parent root = (Parent) FXMLLoader.load(getClass().getResource("/UI/CreateUserUI.fxml"));
+//        Scene scene = new Scene(root);
+//        scene.getStylesheets().add("css/style.css");
+//        Main.getStage().setScene(scene);
+        ChangePageManager.setUI(this.getClass(), "/UI/CreateUserUI.fxml");
     }
 
     @FXML
@@ -75,7 +91,7 @@ public class LoginController {
         usernameToDelete = observableList.get(0).getUsername();
         userDAO.deleteUser(usernameToDelete);
         stage = new Stage();
-        ChangePageManager.changePage(LoginController.class, stage, "/UI/LoginUI.fxml");
+        ChangePageManager.setUI(this.getClass(), "/UI/LoginUI.fxml");
     }
 
     public void showUsernameList() {

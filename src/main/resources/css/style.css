@@ -116,3 +116,64 @@
     -fx-rotate: 5;
 }
 
+#createUserPane {
+    -fx-background-image: url("/images/pink_sailor.jpg");
+}
+
+#textCharacter, #textUsername {
+    -fx-text-fill: #393e46;
+    -fx-font-family: 'Quite Magical';
+    -fx-font-size: 30px;
+    -fx-fill: #393e46;
+}
+
+#inputContainer {
+    -fx-background-color: rgba(255, 255, 255, 0.75);
+    -fx-border-color: rgba(71, 71, 71, 0.86);
+    -fx-border-width: 3;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-font-family: 'Quite Magical';
+    -fx-text-fill: #393e46;
+    -fx-font-size: 25px;
+}
+
+#usernameInput {
+    -fx-border-color: #393e46;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: #ffffff;
+}
+
+.combo-box-base {
+    -fx-background-color: #ffffff;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+    -fx-border-color: #393e46;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+
+#submitCreateButton {
+    -fx-background-color: linear-gradient(to top, #d61d4e, #dd5599);
+}
+
+#backButton {
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-background-color: #831212;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: 'Quite Magical';
+    -fx-font-size: 20px;
+}
+
+#backButton:hover {
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-color: #831212;
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #831212;
+    -fx-font-family: 'Quite Magical';
+    -fx-font-size: 20px;
+}

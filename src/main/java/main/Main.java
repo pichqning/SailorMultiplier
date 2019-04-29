@@ -1,6 +1,9 @@
 package main;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 import orm.DatabaseManager;
 import orm.HighscoreDAO;
@@ -9,20 +12,31 @@ import program.ChangePageManager;
 
 public class Main extends Application {
 
-    private static DatabaseManager db;
-    private static UserDAO userDAO;
-    private static HighscoreDAO highscoreDAO;
+    private static Stage uiStage;
 
     public static void main(String[] args) {
         launch(args);
     }
 
+    public static Stage getStage() {
+        return uiStage;
+    }
+
+
     @Override
     public void start(Stage primaryStage) {
+        uiStage = primaryStage;
         try {
-            ChangePageManager.changePage(Main.class, primaryStage, "/UI/LoginUI.fxml");
+            Parent root = (Parent) FXMLLoader.load(getClass().getResource("/UI/CreateUserUI.fxml"));
+            Scene scene = new Scene(root);
 
-        }catch (Exception e){
+            scene.getStylesheets().add("css/style.css");
+            uiStage.setScene(scene);
+            uiStage.setResizable(false);
+            uiStage.setTitle("Sailor Multiplier");
+            uiStage.sizeToScene();
+            uiStage.show();
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

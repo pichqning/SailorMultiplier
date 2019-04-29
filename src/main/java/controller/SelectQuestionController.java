@@ -48,13 +48,13 @@ public class SelectQuestionController {
         buttonClick.setText("Start");
         id = splitButtonName(buttonClick.getId());
         stage = new Stage();
-        ChangePageManager.changePage(SelectQuestionController.class, stage, "/UI/GameUI.fxml");
+        ChangePageManager.setUI(this.getClass(), "/UI/GameUI.fxml");
     }
 
     @FXML
     private void handleLogoutButton() {
         stage = new Stage();
-        ChangePageManager.changePage(SelectQuestionController.class, stage, "/UI/LoginUI.fxml");
+        ChangePageManager.setUI(this.getClass(), "/UI/LoginUI.fxml");
     }
 
     private void setHighScoreToButton() {
