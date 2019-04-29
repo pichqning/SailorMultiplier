@@ -6,14 +6,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SelectQuestionController">
+<AnchorPane fx:id="selectQuesPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SelectQuestionController">
    <children>
-      <Label fx:id="usernameLogin" layoutX="413.0" layoutY="45.0" text="username">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Label>
-      <VBox layoutX="14.0" layoutY="18.0" prefHeight="605.0" prefWidth="341.0">
+      <VBox fx:id="vboxHighScore" layoutX="203.0" layoutY="17.0" prefHeight="605.0" prefWidth="253.0">
          <children>
             <Button fx:id="h2" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
             <Button fx:id="h3" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
@@ -29,5 +24,15 @@
          </children>
       </VBox>
       <Button fx:id="logoutButton" layoutX="918.0" layoutY="578.0" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="27.0" prefWidth="86.0" text="Logout" />
+      <AnchorPane fx:id="usernameShowContainer" layoutX="486.0" layoutY="14.0" prefHeight="71.0" prefWidth="326.0">
+         <children>
+            <Label fx:id="usernameLogin" layoutX="-7.0" layoutY="1.0" prefHeight="70.0" prefWidth="333.0" style="-fx-alignment: center;" text="s">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="imgSailorContainer" layoutX="600.0" layoutY="90.0" prefHeight="460.0" prefWidth="349.0" />
    </children>
 </AnchorPane>

@@ -167,3 +167,42 @@
     -fx-font-family: 'Quite Magical';
     -fx-font-size: 20px;
 }
+
+/*select question*/
+#selectQuesPane {
+    -fx-background-image: url("/images/school.jpg");
+}
+
+#usernameLogin {
+    -fx-font-family: 'Quite Magical';
+    -fx-text-fill: #33313b;
+    -fx-font-size: 30px;
+}
+
+#usernameShowContainer {
+    -fx-border-color: #33313b;
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-border-radius: 50px;
+    -fx-border-width: 3;
+    -fx-background-radius: 50px;
+}
+
+#h2, #h3, #h4, #h5, #h6, #h7, #h8, #h9, #h10, #h11, #h12 {
+    -fx-font-family: 'Quite Magical';
+    -fx-text-fill: #7d7d7d;
+    -fx-border-radius: 0;
+    -fx-background-color: linear-gradient(to top, #dee1ec, #fffafa);
+    -fx-text-alignment: left;
+}
+
+#vboxHighScore {
+    -fx-padding: 15;
+    -fx-spacing: 10;
+}
+
+#imgSailorContainer {
+    -fx-background-image: url("/images/pink_sailor_login.png");
+    -fx-background-size: 262 460;
+    -fx-background-repeat: no-repeat;
+}
+

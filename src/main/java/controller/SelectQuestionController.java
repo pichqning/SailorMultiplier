@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import orm.DatabaseManager;
 import orm.HighscoreDAO;
@@ -20,11 +21,16 @@ public class SelectQuestionController {
     private Button h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, logoutButton;
 
     @FXML
-    private AnchorPane pane;
+    private AnchorPane selectQuesPane;
+
+    @FXML
+    private AnchorPane imgSailorContainer;
 
     @FXML
     private Label usernameLogin;
 
+    @FXML
+    private VBox vboxHighScore;
 
     private DatabaseManager db;
     private HighscoreDAO highscoreDAO;
@@ -39,6 +45,7 @@ public class SelectQuestionController {
         highscoreDAO = db.getHighscoreDAO();
         user = LoginController.getUser();
         usernameLogin.setText(user.getUsername());
+        setImgSailor();
         setHighScoreToButton();
     }
 
@@ -82,5 +89,19 @@ public class SelectQuestionController {
 
     public static String getId() {
         return id;
+    }
+
+    public void setImgSailor() {
+        if(user.getSailor_character().equals("yellow")) {
+            imgSailorContainer.setStyle("-fx-background-image: url('/images/yellow_sailor_login.png'); -fx-background-size: 323 460; -fx-background-repeat: no-repeat;");
+        }else if(user.getSailor_character().equals("blue")) {
+            imgSailorContainer.setStyle("-fx-background-image: url('/images/blue_sailor_login.png'); -fx-background-size: 330 470; -fx-background-repeat: no-repeat;");
+        }else if(user.getSailor_character().equals("violet")) {
+            imgSailorContainer.setStyle("-fx-background-image: url('/images/purple_sailor_login.png'); -fx-background-size: 250 450; -fx-background-repeat: no-repeat;");
+        }else if(user.getSailor_character().equals("green")) {
+            imgSailorContainer.setStyle("-fx-background-image: url('/images/green_sailor_login.png'); -fx-background-size: 276 460; -fx-background-repeat: no-repeat;");
+        }else {
+            imgSailorContainer.setStyle("-fx-background-image: url('/images/pink_sailor_login.png'); -fx-background-size: 262 460; -fx-background-repeat: no-repeat;");
+        }
     }
 }

@@ -27,7 +27,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         uiStage = primaryStage;
         try {
-            Parent root = (Parent) FXMLLoader.load(getClass().getResource("/UI/CreateUserUI.fxml"));
+            Parent root = (Parent) FXMLLoader.load(getClass().getResource("/UI/LoginUI.fxml"));
             Scene scene = new Scene(root);
 
             scene.getStylesheets().add("css/style.css");
