@@ -59,7 +59,7 @@ public class Game {
      * add choices for show in the game
      * */
     public void addChoice (Answer a) {
-        for (int i = 0 ; i < 4 ; i ++) {
+        for (int i = -1 ; i < 3 ; i ++) {
             int choice = a.getAnswer() + i ;
             choiceList.add(choice);
         }
