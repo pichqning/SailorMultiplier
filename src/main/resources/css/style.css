@@ -70,17 +70,6 @@
     -fx-text-fill: #5768E4;
 }
 
-#highScoreButton {
-    -fx-background-color: red;
-}
-
-#highScoreButton:hover{
-
-    -fx-background-color:#64EE64;
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
-    -fx-text-alignment: center;
-}
-
 #createUserButton {
 }
 
@@ -116,6 +105,7 @@
     -fx-rotate: 5;
 }
 
+/*create page*/
 #createUserPane {
     -fx-background-image: url("/images/pink_sailor.jpg");
 }

@@ -61,7 +61,7 @@ public class LoginController {
 
     @FXML
     private void handleLoginButton() {
-        if(checkChosenUser()){
+        if(checkChosenUser("Please, select user for login ❤")){
         observableList = showUsername.getSelectionModel().getSelectedItems();
         usernameToLogin = observableList.get(0).getUsername();
 
@@ -72,26 +72,19 @@ public class LoginController {
     }
 
     @FXML
-    private void handleCreateUserButton() throws IOException {
-//        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//        stage = new Stage();
-//        ChangePageManager.changePage(LoginController.class, stage, "/UI/CreateUserUI.fxml");
-
-//        ChangePageManager.changeUI("UI/CreateUserUI.fxml", loginPane);
-//        Parent root = (Parent) FXMLLoader.load(getClass().getResource("/UI/CreateUserUI.fxml"));
-//        Scene scene = new Scene(root);
-//        scene.getStylesheets().add("css/style.css");
-//        Main.getStage().setScene(scene);
+    private void handleCreateUserButton() {
         ChangePageManager.setUI(this.getClass(), "/UI/CreateUserUI.fxml");
     }
 
     @FXML
     private void handleDeleteUserButton() {
-        observableList = showUsername.getSelectionModel().getSelectedItems();
-        usernameToDelete = observableList.get(0).getUsername();
-        userDAO.deleteUser(usernameToDelete);
-        stage = new Stage();
-        ChangePageManager.setUI(this.getClass(), "/UI/LoginUI.fxml");
+        if(checkChosenUser("Please, select user for delete ❤")){
+            observableList = showUsername.getSelectionModel().getSelectedItems();
+            usernameToDelete = observableList.get(0).getUsername();
+            userDAO.deleteUser(usernameToDelete);
+            stage = new Stage();
+            ChangePageManager.setUI(this.getClass(), "/UI/LoginUI.fxml");
+        }
     }
 
     public void showUsernameList() {
@@ -105,11 +98,11 @@ public class LoginController {
         usernameCol.setResizable(false);
     }
 
-    private boolean checkChosenUser(){
+    private boolean checkChosenUser(String txt){
         if(showUsername.getSelectionModel().getSelectedItems().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
-            alert.setContentText("Please, choose user for login");
+            alert.setContentText(txt);
             alert.showAndWait();
             return false;
         }
