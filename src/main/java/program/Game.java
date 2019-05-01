@@ -13,9 +13,9 @@ public class Game {
     private List<Question> questionList;
     private List<Integer> choiceList;
     private int multiplier;
-    private static int score;
-    private static int wrong;
-    private static int correct ;
+    private int score;
+    private int wrong;
+    private int correct ;
     private static Game instance;
 
     public static Game getInstance(int multiplier) {
@@ -35,20 +35,16 @@ public class Game {
         this.correct = 0;
    }
 
-    public List<Answer> getAnswerList() {
-        return answerList;
+    public int getScore() {
+        return this.score;
     }
 
-    public List<Question> getQuestionList() {
-        return questionList;
+    public int getCorrect() {
+        return correct;
     }
 
-    public List<Integer> getChoiceList() {
-        return choiceList;
-    }
-
-    public int getMultiplier() {
-        return multiplier;
+    public int getWrong() {
+        return wrong;
     }
 
     /**
@@ -58,6 +54,12 @@ public class Game {
         String q = questionList.get(0).toString();
         questionList.remove(0);
         return q;
+    }
+
+    public Answer getAnswer () {
+        Answer a = answerList.get(0);
+        answerList.remove(0);
+        return a;
     }
     /**
      * add question to the list for displayed in the UI
