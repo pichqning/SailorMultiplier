@@ -14,8 +14,9 @@
             <Label fx:id="showOldHighScore" layoutX="33.0" layoutY="265.0" prefHeight="47.0" prefWidth="294.0" text="Label" />
             <Text fx:id="HighScoreText" layoutX="52.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High Score" wrappingWidth="131.00648498535156" />
             <Label fx:id="showOldUser" layoutX="94.0" layoutY="338.0" prefHeight="27.0" prefWidth="146.0" text="Label" />
-            <Label fx:id="showResult" layoutX="604.0" layoutY="271.0" prefHeight="27.0" prefWidth="146.0" text="Label" />
+            <Label fx:id="showResult" layoutX="543.0" layoutY="254.0" prefHeight="66.0" prefWidth="275.0" text="Label" />
             <Label fx:id="usernamePlayed" layoutX="272.0" layoutY="24.0" prefHeight="46.0" prefWidth="371.0" text="Label" />
+            <Label fx:id="showDetailResult" layoutX="479.0" layoutY="338.0" prefHeight="46.0" prefWidth="385.0" text="Label" />
          </children>
       </AnchorPane>
    </children>
