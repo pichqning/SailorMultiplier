@@ -9,7 +9,7 @@ public class Question {
 
     public Question (int mul) {
         this.multiplier = mul;
-        this.x = rd.nextInt(12+1);
+        this.x = rd.nextInt(24) + 1;
     }
 
     public int getMultiplier() {
@@ -18,6 +18,10 @@ public class Question {
 
     public int getX() {
         return x;
+    }
+
+    public void setX(int x) {
+        this.x = rd.nextInt(x)+1;
     }
 
     public Answer creatAnswer () {
