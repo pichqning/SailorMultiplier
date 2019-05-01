@@ -2,28 +2,14 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="selectQuesPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SelectQuestionController">
    <children>
-      <VBox fx:id="vboxHighScore" layoutX="203.0" layoutY="17.0" prefHeight="605.0" prefWidth="253.0">
-         <children>
-            <Button fx:id="h2" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
-            <Button fx:id="h3" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
-            <Button fx:id="h4" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
-            <Button fx:id="h5" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
-            <Button fx:id="h6" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
-            <Button fx:id="h7" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
-            <Button fx:id="h8" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
-            <Button fx:id="h9" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
-            <Button fx:id="h10" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
-            <Button fx:id="h11" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
-            <Button fx:id="h12" mnemonicParsing="false" onAction="#handleHighScoreButton" prefHeight="55.0" prefWidth="341.0" text="Button" />
-         </children>
-      </VBox>
-      <Button fx:id="logoutButton" layoutX="918.0" layoutY="578.0" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="27.0" prefWidth="86.0" text="Logout" />
+      <Button fx:id="logoutButton" layoutX="880.0" layoutY="578.0" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="27.0" prefWidth="124.0" text="LOGOUT ➥" />
       <AnchorPane fx:id="usernameShowContainer" layoutX="486.0" layoutY="14.0" prefHeight="71.0" prefWidth="326.0">
          <children>
             <Label fx:id="usernameLogin" layoutX="-7.0" layoutY="1.0" prefHeight="70.0" prefWidth="333.0" style="-fx-alignment: center;" text="s">
@@ -34,5 +20,101 @@
          </children>
       </AnchorPane>
       <AnchorPane fx:id="imgSailorContainer" layoutX="600.0" layoutY="90.0" prefHeight="460.0" prefWidth="349.0" />
+      <ScrollPane layoutX="175.0" layoutY="38.0" prefHeight="549.0" prefWidth="290.0">
+         <content>
+            <VBox fx:id="vboxHighScore" prefHeight="896.0" prefWidth="269.0">
+               <children>
+                  <AnchorPane fx:id="pane2" prefHeight="82.0" prefWidth="233.0">
+                     <children>
+                        <Label fx:id="u2" layoutX="15.0" layoutY="14.0" prefHeight="26.0" prefWidth="137.0" text="Username" />
+                        <Label fx:id="h2" layoutX="100.0" layoutY="47.0" text="Label" />
+                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Button fx:id="b2" layoutX="196.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="2" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pane3" prefHeight="82.0" prefWidth="233.0">
+                     <children>
+                        <Label fx:id="u3" layoutX="15.0" layoutY="14.0" text="Username" />
+                        <Label fx:id="h3" layoutX="100.0" layoutY="47.0" text="Label" />
+                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Button fx:id="b3" layoutX="195.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="3" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pane4" prefHeight="82.0" prefWidth="233.0">
+                     <children>
+                        <Label fx:id="u4" layoutX="15.0" layoutY="14.0" text="Username" />
+                        <Label fx:id="h4" layoutX="100.0" layoutY="47.0" text="Label" />
+                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Button fx:id="b4" layoutX="195.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="4" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pane5" prefHeight="82.0" prefWidth="233.0">
+                     <children>
+                        <Label fx:id="u5" layoutX="15.0" layoutY="14.0" text="Username" />
+                        <Label fx:id="h5" layoutX="100.0" layoutY="47.0" text="Label" />
+                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Button fx:id="b5" layoutX="195.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="5" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pane6" prefHeight="82.0" prefWidth="233.0">
+                     <children>
+                        <Label fx:id="u6" layoutX="15.0" layoutY="14.0" text="Username" />
+                        <Label fx:id="h6" layoutX="100.0" layoutY="47.0" text="Label" />
+                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Button fx:id="b6" layoutX="196.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="6" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pane7" prefHeight="82.0" prefWidth="233.0">
+                     <children>
+                        <Label fx:id="u7" layoutX="15.0" layoutY="14.0" text="Username" />
+                        <Label fx:id="h7" layoutX="100.0" layoutY="47.0" text="Label" />
+                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Button fx:id="b7" layoutX="196.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="7" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pane8" prefHeight="82.0" prefWidth="233.0">
+                     <children>
+                        <Label fx:id="u8" layoutX="15.0" layoutY="14.0" text="Username" />
+                        <Label fx:id="h8" layoutX="100.0" layoutY="47.0" text="Label" />
+                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Button fx:id="b8" layoutX="194.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="8" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pane9" prefHeight="82.0" prefWidth="233.0">
+                     <children>
+                        <Label fx:id="u9" layoutX="15.0" layoutY="14.0" text="Username" />
+                        <Label fx:id="h9" layoutX="100.0" layoutY="47.0" text="Label" />
+                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Button fx:id="b9" layoutX="194.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="9" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pane10" prefHeight="82.0" prefWidth="233.0">
+                     <children>
+                        <Label fx:id="u10" layoutX="15.0" layoutY="14.0" text="Username" />
+                        <Label fx:id="h10" layoutX="100.0" layoutY="47.0" text="Label" />
+                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Button fx:id="b10" layoutX="194.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="10" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pane11" prefHeight="82.0" prefWidth="233.0">
+                     <children>
+                        <Label fx:id="u11" layoutX="15.0" layoutY="14.0" text="Username" />
+                        <Label fx:id="h11" layoutX="100.0" layoutY="47.0" text="Label" />
+                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Button fx:id="b11" layoutX="194.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="11" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pane12" prefHeight="82.0" prefWidth="233.0">
+                     <children>
+                        <Label fx:id="u12" layoutX="15.0" layoutY="14.0" text="Username" />
+                        <Label fx:id="h12" layoutX="100.0" layoutY="47.0" text="Label" />
+                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Button fx:id="b12" layoutX="194.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="12" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>
