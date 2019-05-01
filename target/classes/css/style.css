@@ -6,7 +6,8 @@
 
 /*login page*/
 #loginPane {
-    -fx-background-image: url("/images/rainbow_background.jpg");
+    /*-fx-background-image: url("/images/rainbow_background.jpg");*/
+    -fx-background-color: #ffffff;
     -fx-background-position: center center;
     -fx-background-size: 1080 640;
 }
@@ -49,11 +50,13 @@
 }
 
 .table-row-cell:selected{
-    -fx-background-color: #2AC3E8;
+    -fx-background-color: #ff78ae;
+    -fx-text-fill: #ffffff;
 }
 
 .table-row-cell:hover{
-    -fx-background-color: #2AC3E8;
+    -fx-background-color: #ff78ae;
+    -fx-text-fill: #ffffff;
 }
 
 .table-view .column-header .label {
@@ -61,13 +64,13 @@
     -fx-font-weight: bold;
     -fx-background-color: #006BA5;
     -fx-font-size: 32px;
+    -fx-padding: 0 0;
 }
 
 #usernameCol {
     -fx-font-family: 'Quite Magical';
     -fx-font-size: 27px;
     -fx-alignment: center;
-    -fx-text-fill: #5768E4;
 }
 
 #createUserButton {
@@ -170,7 +173,9 @@
 
 /*select question*/
 #selectQuesPane {
-    -fx-background-image: url("/images/school.jpg");
+    -fx-background-image: url("/images/school_sakura.jpg");
+    -fx-background-position: center center;
+    -fx-background-size: 1080 640;
 }
 
 #usernameLogin {
@@ -182,27 +187,116 @@
 #usernameShowContainer {
     -fx-border-color: #33313b;
     -fx-background-color: rgba(255, 255, 255, 0.8);
-    -fx-border-radius: 50px;
-    -fx-border-width: 3;
-    -fx-background-radius: 50px;
+    -fx-border-radius: 0px;
+    -fx-border-width: 1;
+    -fx-background-radius: 0px;
 }
 
 #h2, #h3, #h4, #h5, #h6, #h7, #h8, #h9, #h10, #h11, #h12 {
-    -fx-font-family: 'Quite Magical';
-    -fx-text-fill: #7d7d7d;
-    -fx-border-radius: 0;
-    -fx-background-color: linear-gradient(to top, #dee1ec, #fffafa);
-    -fx-text-alignment: left;
+    -fx-font-size: 29px;
 }
 
-#vboxHighScore {
-    -fx-padding: 15;
-    -fx-spacing: 10;
+#u2, #u3, #u4, #u5, #u6, #u7, #u8, #u9, #u10, #u11, #u12 {
+    -fx-text-fill: #d61d4e;
+    -fx-font-size: 35px;
+}
+
+#b2, #b3, #b4, #b5, #b6, #b7, #b8, #b9, #b10, #b11, #b12 {
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-background-color: #ffb7c5;
+    -fx-background-size: 100 100;
+    -fx-padding: 15px 25px;
+    -fx-font-size: 20px;
+}
+
+#b2:hover, #b3:hover, #b4:hover, #b5:hover, #b6:hover,
+#b7:hover, #b8:hover, #b9:hover, #b10:hover, #b11:hover, #b12:hover{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: linear-gradient(to top, #d61d4e, #dd5599);
+    -fx-border-color: #ffb7c5;
+    -fx-border-width: 3;
+}
+
+
+
+#pane2, #pane3, #pane4, #pane5, #pane6, #pane7, #pane8, #pane9, #pane10, #pane11, #pane12 {
+    -fx-border-color: #ffb7c5;
+    -fx-border-width: 0.4;
+    -fx-background-color: #ffffff;
+    -fx-font-family: 'Quite Magical';
+
 }
 
 #imgSailorContainer {
     -fx-background-image: url("/images/pink_sailor_login.png");
     -fx-background-size: 262 460;
     -fx-background-repeat: no-repeat;
+}
+
+#logoutButton {
+    -fx-font-family: 'Quite Magical';
+    -fx-border-width: 2;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #ab93c9;
+    -fx-font-size: 20px;
+}
+
+#logoutButton:hover {
+    -fx-border-width: 2;
+    -fx-text-fill: #ab93c9;
+    -fx-background-color: #ffffff;
+    -fx-font-size: 20px;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color :transparent;
+    -fx-border-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-border-radius :2.0em;
+}
+
+
+.scroll-bar:horizontal .increment-button ,
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 0.0 10.0 0.0;
+
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.15em 0.0;
+}
+
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.0 0.15em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color :derive(black,90.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color :derive(#4D4C4F,10.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
 }
 
