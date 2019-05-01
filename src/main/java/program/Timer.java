@@ -12,10 +12,11 @@ import java.util.concurrent.TimeUnit;
  */
 public class Timer{
     private int second ;
-    private boolean canPlay;
+    public static boolean canPlay;
     Runnable runnable = new Runnable() {
 
         @Override public void run() {
+            canPlay = false;
             System.out.println("Hello, world!");
             // 60 second passed excute the question window and show the score.
         }
@@ -26,22 +27,22 @@ public class Timer{
         this.canPlay = true;
     }
 
-
     public void start() {
-            Executors.newSingleThreadScheduledExecutor().schedule(
-                    runnable,
-                    60,
-                    TimeUnit.SECONDS);
-        canPlay = false;
+        Executors.newSingleThreadScheduledExecutor().schedule(runnable,second,TimeUnit.SECONDS);
     }
 
     public int getSecond() {
         return second;
     }
 
+    public void setSecond(int second) {
+        this.second = second;
+    }
+
     public boolean getCanplay() {
         return canPlay;
     }
+
     public void reset () {
         this.canPlay = true;
     }

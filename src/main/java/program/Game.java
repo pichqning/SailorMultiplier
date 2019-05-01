@@ -13,12 +13,26 @@ public class Game {
     private List<Question> questionList;
     private List<Integer> choiceList;
     private int multiplier;
+    private static int score;
+    private static int wrong;
+    private static int correct ;
+    private static Game instance;
+
+    public static Game getInstance(int multiplier) {
+        if (instance == null) {
+            instance = new Game(multiplier);
+        }
+        return instance;
+    }
 
     public Game(int multiplier) {
         this.answerList = new ArrayList<>();
         this.questionList = new ArrayList<>();
         this.choiceList = new ArrayList<>();
         this.multiplier = multiplier;
+        this.score = 0;
+        this.wrong = 0;
+        this.correct = 0;
    }
 
     public List<Answer> getAnswerList() {
@@ -38,12 +52,24 @@ public class Game {
     }
 
     /**
+     *
+     */
+    public String getQuestion () {
+        String q = questionList.get(0).toString();
+        questionList.remove(0);
+        return q;
+    }
+    /**
      * add question to the list for displayed in the UI
      */
     public void addQuestion () {
-        Question q = new Question(multiplier);
-        questionList.add(q);
-        this.addAnswer(q);
+//        while (Timer.canPlay) {
+            Question q = new Question(multiplier);
+            System.out.println(q.toString());
+            questionList.add(q);
+            this.addAnswer(q);
+//        }
+//        questionList.clear();
     }
 
     /**
@@ -70,6 +96,23 @@ public class Game {
      * */
     public void clearChoice () {
         choiceList.clear();
+    }
+
+    public void reset() {
+        questionList.clear();
+        answerList.clear();
+        score = 0;
+        correct = 0;
+        wrong = 0;
+    }
+
+    public void checkAnswer (String userAns , Answer answer) {
+        int temp = Integer.parseInt(userAns);
+        if (temp == answer.getAnswer()) {
+            score += 20;
+            correct += 1;
+        }
+        else {score -= 10 ; wrong += 1 ;}
     }
 
 
