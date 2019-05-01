@@ -1,7 +1,6 @@
 package controller;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -55,7 +54,7 @@ public class SelectQuestionController {
     @FXML
     private void handleHighScoreButton(ActionEvent e) {
         Button buttonClick = (Button) e.getSource();
-        buttonClick.setText("Start");
+        buttonClick.setText("Go");
         id = splitButtonName(buttonClick.getId());
         stage = new Stage();
         ChangePageManager.setUI(this.getClass(), "/UI/GameUI.fxml");
@@ -95,11 +94,11 @@ public class SelectQuestionController {
     }
 
     private String getUsernameFromHighScoreTable(int id) {
-        return highscoreDAO.getListFromColumn("multiplier", id).get(0).getUsername();
+        return highscoreDAO.getListFromColumn("multiplier", id).getUsername();
     }
 
     private String getHighScoreFromHighScoreTable(int id) {
-        return String.valueOf(highscoreDAO.getListFromColumn("multiplier", id).get(0).getScore());
+        return String.valueOf(highscoreDAO.getListFromColumn("multiplier", id).getScore());
     }
 
     private String splitButtonName(String id) {

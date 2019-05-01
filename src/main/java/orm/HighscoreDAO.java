@@ -15,17 +15,17 @@ public class HighscoreDAO extends BaseDaoImpl<Highscore, Integer> {
         super(connectionSource, Highscore.class);
     }
 
-    public List<Highscore> getListFromColumn(String tableColumn, int search) {
+    public Highscore getListFromColumn(String tableColumn, int search) {
         QueryBuilder<Highscore, Integer> qb = this. queryBuilder();
-        List<Highscore> saleList = null;
+        List<Highscore> highscores = null;
 
         try {
-            saleList = qb.where().eq(tableColumn, search).query();
+            highscores = qb.where().eq(tableColumn, search).query();
         } catch (SQLException se){
             System.out.println("Cannot search in high score data.");
         }
 
-        return saleList;
+        return highscores.get(0);
     }
 
     public void updateHighScore(int key, User user, int newScore) {

@@ -5,25 +5,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GameController">
+<AnchorPane fx:id="gamePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GameController">
    <children>
       <Text layoutX="846.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" />
       <Text layoutX="166.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score" />
       <AnchorPane layoutX="100.0" layoutY="189.0" prefHeight="409.0" prefWidth="878.0" style="-fx-background-color: grey;">
          <children>
-            <Button fx:id="ans1" layoutX="82.0" layoutY="173.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="306.0" text="Button" />
-            <Button fx:id="ans2" layoutX="482.0" layoutY="172.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="306.0" text="Button" />
-            <Button fx:id="ans3" layoutX="82.0" layoutY="286.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="306.0" text="Button" />
-            <Button fx:id="ans4" layoutX="482.0" layoutY="283.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="306.0" text="Button" />
+            <Button fx:id="ans1" layoutX="82.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleAnswerButton" prefHeight="95.0" prefWidth="306.0" text="Button" />
+            <Button fx:id="ans2" layoutX="482.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleAnswerButton" prefHeight="95.0" prefWidth="306.0" text="Button" />
+            <Button fx:id="ans3" layoutX="82.0" layoutY="286.0" mnemonicParsing="false" onAction="#handleAnswerButton" prefHeight="95.0" prefWidth="306.0" text="Button" />
+            <Button fx:id="ans4" layoutX="482.0" layoutY="283.0" mnemonicParsing="false" onAction="#handleAnswerButton" prefHeight="95.0" prefWidth="306.0" text="Button" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="290.0" layoutY="135.0" prefHeight="200.0" prefWidth="492.0" style="-fx-background-color: pink;">
+      <AnchorPane fx:id="questionPane" layoutX="290.0" layoutY="135.0" prefHeight="200.0" prefWidth="492.0" style="-fx-background-color: pink;">
          <children>
-            <Label fx:id="question" layoutX="36.0" layoutY="31.0" prefHeight="143.0" prefWidth="415.0" text="Label" />
+            <Label fx:id="question" layoutX="34.0" layoutY="37.0" prefHeight="133.0" prefWidth="418.0" text="Label" />
          </children>
       </AnchorPane>
-      <Label fx:id="usernameGame" layoutX="25.0" layoutY="21.0" prefHeight="17.0" prefWidth="142.0" text="Username" />
-      <Label fx:id="scoreGame" layoutX="216.0" layoutY="62.0" text="Label" />
-      <Label fx:id="timerGame" layoutX="895.0" layoutY="61.0" text="Label" />
+      <Label fx:id="usernameGame" layoutX="40.0" layoutY="29.0" prefHeight="17.0" prefWidth="174.0" text="Username" />
+      <Label fx:id="scoreGame" layoutX="214.0" layoutY="62.0" text="Label" />
+      <Label fx:id="timeGame" layoutX="889.0" layoutY="62.0" text="Label" />
    </children>
 </AnchorPane>

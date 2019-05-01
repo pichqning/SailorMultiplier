@@ -4,6 +4,7 @@ import program.Question;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Create Game for Each Multiplier
@@ -47,17 +48,22 @@ public class Game {
         return wrong;
     }
 
+    public List<Answer> getAnswerList() {
+        return answerList;
+    }
+
     /**
      *
      */
     public String getQuestion () {
         String q = questionList.get(0).toString();
+        System.out.println(q);
         questionList.remove(0);
         return q;
     }
 
-    public Answer getAnswer () {
-        Answer a = answerList.get(0);
+    public int getAnswer () {
+        int a = answerList.get(0).getAnswer();
         answerList.remove(0);
         return a;
     }
@@ -91,6 +97,7 @@ public class Game {
             int choice = a.getAnswer() + i ;
             choiceList.add(choice);
         }
+
     }
 
     /**
@@ -108,13 +115,17 @@ public class Game {
         wrong = 0;
     }
 
-    public void checkAnswer (String userAns , Answer answer) {
+    public void checkAnswer (String userAns , int answer) {
         int temp = Integer.parseInt(userAns);
-        if (temp == answer.getAnswer()) {
+        if (temp == answer) {
             score += 20;
             correct += 1;
         }
         else {score -= 10 ; wrong += 1 ;}
+    }
+
+    public List<Integer> getChoiceList() {
+        return choiceList;
     }
 
 

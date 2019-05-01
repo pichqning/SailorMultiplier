@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EndGameController">
+   <children>
+      <AnchorPane layoutX="77.0" layoutY="56.0" prefHeight="484.0" prefWidth="926.0">
+         <children>
+            <Label fx:id="showTotalScore" layoutX="26.0" layoutY="111.0" prefHeight="47.0" prefWidth="848.0" text="Label" />
+            <Text fx:id="scoreText" layoutX="270.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCORE" wrappingWidth="245.36293029785156" />
+            <Text fx:id="byText" layoutX="46.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By" wrappingWidth="53.59599304199219" />
+            <Label fx:id="showOldHighScore" layoutX="33.0" layoutY="265.0" prefHeight="47.0" prefWidth="294.0" text="Label" />
+            <Text fx:id="HighScoreText" layoutX="52.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High Score" wrappingWidth="131.00648498535156" />
+            <Label fx:id="showOldUser" layoutX="94.0" layoutY="338.0" prefHeight="27.0" prefWidth="146.0" text="Label" />
+            <Label fx:id="showResult" layoutX="604.0" layoutY="271.0" prefHeight="27.0" prefWidth="146.0" text="Label" />
+            <Label fx:id="usernamePlayed" layoutX="272.0" layoutY="24.0" prefHeight="46.0" prefWidth="371.0" text="Label" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
