@@ -20,7 +20,7 @@ public class ChangePageManager {
             Parent root = (Parent) FXMLLoader.load(c.getClass().getResource(path));
             Scene scene = new Scene(root);
             scene.getStylesheets().add("css/style.css");
-            Font.loadFont(c.getClass().getResource("/font/ElsieSwashCaps.ttf").toExternalForm(), 10);
+            Font.loadFont(c.getClass().getResourceAsStream("/font/ElsieSwashCaps.ttf"), 16);
             Main.getStage().setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
