@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import orm.DatabaseManager;
 import orm.HighscoreDAO;
@@ -31,6 +32,7 @@ public class Main extends Application {
             Scene scene = new Scene(root);
 
             scene.getStylesheets().add("css/style.css");
+            Font.loadFont(getClass().getResource("/font/ElsieSwashCaps.ttf").toExternalForm(), 10);
             uiStage.setScene(scene);
             uiStage.setResizable(false);
             uiStage.setTitle("Sailor Multiplier");

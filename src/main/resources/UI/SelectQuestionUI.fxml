@@ -27,8 +27,8 @@
                   <AnchorPane fx:id="pane2" prefHeight="82.0" prefWidth="233.0">
                      <children>
                         <Label fx:id="u2" layoutX="15.0" layoutY="14.0" prefHeight="26.0" prefWidth="137.0" text="Username" />
-                        <Label fx:id="h2" layoutX="100.0" layoutY="47.0" text="Label" />
-                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Label fx:id="h2" layoutX="101.0" layoutY="52.0" text="Label" />
+                        <Label layoutX="16.0" layoutY="52.0" text="High Score:" />
                         <Button fx:id="b2" layoutX="196.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="2" />
                      </children>
                   </AnchorPane>
@@ -36,7 +36,7 @@
                      <children>
                         <Label fx:id="u3" layoutX="15.0" layoutY="14.0" text="Username" />
                         <Label fx:id="h3" layoutX="100.0" layoutY="47.0" text="Label" />
-                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Label layoutX="16.0" layoutY="52.0" text="High Score:" />
                         <Button fx:id="b3" layoutX="195.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="3" />
                      </children>
                   </AnchorPane>
@@ -44,7 +44,7 @@
                      <children>
                         <Label fx:id="u4" layoutX="15.0" layoutY="14.0" text="Username" />
                         <Label fx:id="h4" layoutX="100.0" layoutY="47.0" text="Label" />
-                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Label layoutX="16.0" layoutY="52.0" text="High Score:" />
                         <Button fx:id="b4" layoutX="195.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="4" />
                      </children>
                   </AnchorPane>
@@ -52,7 +52,7 @@
                      <children>
                         <Label fx:id="u5" layoutX="15.0" layoutY="14.0" text="Username" />
                         <Label fx:id="h5" layoutX="100.0" layoutY="47.0" text="Label" />
-                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Label layoutX="16.0" layoutY="52.0" text="High Score:" />
                         <Button fx:id="b5" layoutX="195.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="5" />
                      </children>
                   </AnchorPane>
@@ -60,7 +60,7 @@
                      <children>
                         <Label fx:id="u6" layoutX="15.0" layoutY="14.0" text="Username" />
                         <Label fx:id="h6" layoutX="100.0" layoutY="47.0" text="Label" />
-                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Label layoutX="16.0" layoutY="52.0" text="High Score:" />
                         <Button fx:id="b6" layoutX="196.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="6" />
                      </children>
                   </AnchorPane>
@@ -68,7 +68,7 @@
                      <children>
                         <Label fx:id="u7" layoutX="15.0" layoutY="14.0" text="Username" />
                         <Label fx:id="h7" layoutX="100.0" layoutY="47.0" text="Label" />
-                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Label layoutX="16.0" layoutY="52.0" text="High Score:" />
                         <Button fx:id="b7" layoutX="196.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="7" />
                      </children>
                   </AnchorPane>
@@ -76,7 +76,7 @@
                      <children>
                         <Label fx:id="u8" layoutX="15.0" layoutY="14.0" text="Username" />
                         <Label fx:id="h8" layoutX="100.0" layoutY="47.0" text="Label" />
-                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Label layoutX="16.0" layoutY="52.0" text="High Score:" />
                         <Button fx:id="b8" layoutX="194.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="8" />
                      </children>
                   </AnchorPane>
@@ -84,7 +84,7 @@
                      <children>
                         <Label fx:id="u9" layoutX="15.0" layoutY="14.0" text="Username" />
                         <Label fx:id="h9" layoutX="100.0" layoutY="47.0" text="Label" />
-                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Label layoutX="16.0" layoutY="52.0" text="High Score:" />
                         <Button fx:id="b9" layoutX="194.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="9" />
                      </children>
                   </AnchorPane>
@@ -92,7 +92,7 @@
                      <children>
                         <Label fx:id="u10" layoutX="15.0" layoutY="14.0" text="Username" />
                         <Label fx:id="h10" layoutX="100.0" layoutY="47.0" text="Label" />
-                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Label layoutX="16.0" layoutY="52.0" text="High Score:" />
                         <Button fx:id="b10" layoutX="194.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="10" />
                      </children>
                   </AnchorPane>
@@ -100,7 +100,7 @@
                      <children>
                         <Label fx:id="u11" layoutX="15.0" layoutY="14.0" text="Username" />
                         <Label fx:id="h11" layoutX="100.0" layoutY="47.0" text="Label" />
-                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Label layoutX="16.0" layoutY="52.0" text="High Score:" />
                         <Button fx:id="b11" layoutX="194.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="11" />
                      </children>
                   </AnchorPane>
@@ -108,7 +108,7 @@
                      <children>
                         <Label fx:id="u12" layoutX="15.0" layoutY="14.0" text="Username" />
                         <Label fx:id="h12" layoutX="100.0" layoutY="47.0" text="Label" />
-                        <Label layoutX="16.0" layoutY="52.0" style="-fx-font-size: 19px;" text="High Score:" />
+                        <Label layoutX="16.0" layoutY="52.0" text="High Score:" />
                         <Button fx:id="b12" layoutX="194.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleHighScoreButton" text="12" />
                      </children>
                   </AnchorPane>

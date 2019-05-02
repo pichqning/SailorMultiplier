@@ -5,6 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import main.Main;
 
@@ -13,27 +14,13 @@ import java.net.URL;
 
 public class ChangePageManager {
 
-//    public static void changePage(Class c, Stage stage, String path) {
-//        try {
-//            Parent root = (Parent) FXMLLoader.load(c.getClass().getResource(path));
-//            Scene scene = new Scene(root);
-//
-//            scene.getStylesheets().add("css/style.css");
-//            stage.setScene(scene);
-//            stage.setResizable(false);
-//            stage.setTitle("Sailor Multiplier");
-//            stage.sizeToScene();
-//            stage.show();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     public static void setUI(Class c, String path) {
         try{
             Parent root = (Parent) FXMLLoader.load(c.getClass().getResource(path));
             Scene scene = new Scene(root);
             scene.getStylesheets().add("css/style.css");
+            Font.loadFont(c.getClass().getResource("/font/ElsieSwashCaps.ttf").toExternalForm(), 10);
             Main.getStage().setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
