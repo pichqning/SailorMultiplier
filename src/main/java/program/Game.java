@@ -121,6 +121,7 @@ public class Game {
             score += 20;
             correct += 1;
         }
+        else if (score < 0) score = 0;
         else {score -= 10 ; wrong += 1 ;}
     }
 

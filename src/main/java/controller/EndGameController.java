@@ -16,7 +16,7 @@ public class EndGameController {
     private DatabaseManager db;
     private HighscoreDAO highscoreDAO;
     private Highscore highscore;
-    private User curentUser;
+    private User currentUser;
 
     private int oldHighScore = 0, currentScore = 0, multiplier = 0;
     private String oldUsername = "", currentUsername = "";
@@ -43,8 +43,8 @@ public class EndGameController {
         oldUsername = highscore.getUsername();
         showOldUser.setText(oldUsername);
 
-        curentUser = LoginController.getUser();
-        currentUsername = curentUser.getUsername();
+        currentUser = LoginController.getUser();
+        currentUsername = currentUser.getUsername();
         usernamePlayed.setText(currentUsername);
     }
 
@@ -52,7 +52,7 @@ public class EndGameController {
         if(oldHighScore < currentScore) {
             showResult.setText("You win!");
             showDetailResult.setText(String.format("NEW High Score of %d multiplication table is %s", multiplier, currentUsername));
-            highscoreDAO.updateHighScore(multiplier, curentUser, currentScore);
+            highscoreDAO.updateHighScore(multiplier, currentUser, currentScore);
         } else {
             showResult.setText("You lose!");
             showDetailResult.setText(String.format("You can't BEAT %s in %d multiplication table.", oldUsername, multiplier));

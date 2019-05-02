@@ -19,7 +19,7 @@ import java.util.Timer;
 public class GameController {
 
     @FXML
-    private AnchorPane gamePane, questionPane;
+    private AnchorPane gamePane, questionPane, answerContainer;
 
     @FXML
     private Button ans1, ans2, ans3, ans4;
@@ -51,7 +51,7 @@ public class GameController {
         multiplier = Integer.parseInt(SelectQuestionController.getId());
         game = Game.getInstance(multiplier);
         setUp();
-        start();
+//        start();
     }
 
     @FXML
@@ -65,20 +65,20 @@ public class GameController {
 
     private void setBackground(User u){
         if(u.getSailor_character().equals("blue")) {
-            gamePane.setStyle("-fx-background-color: #255ac0");
-            questionPane.setStyle("-fx-background-color: #84c1c2");
+            gamePane.setStyle("-fx-background-image: url('/images/blue_fight.jpg'); -fx-background-size: 1080 640; -fx-background-position: center center;");
+            questionPane.setStyle("-fx-background-color: rgba(74, 108, 232, 0.50)");
         }else if(u.getSailor_character().equals("yellow")) {
-            gamePane.setStyle("-fx-background-color: #f9f977");
-            questionPane.setStyle("-fx-background-color: #f0eee2");
+            gamePane.setStyle("-fx-background-image: url('/images/yellow_fight1.png'); -fx-background-size: 1080 640; -fx-background-position: center center;");
+            questionPane.setStyle("-fx-background-color: rgba(202, 204, 102, 0.50)");
         }else if(u.getSailor_character().equals("violet")) {
-            gamePane.setStyle("-fx-background-color: #7d4199");
-            questionPane.setStyle("-fx-background-color: #c0bad4");
+            gamePane.setStyle("-fx-background-image: url('/images/purple_fight1.jpg'); -fx-background-size: 1080 640; -fx-background-position: center center;");
+            questionPane.setStyle("-fx-background-color: rgba(161, 102, 204, 0.50)");
         }else if(u.getSailor_character().equals("green")) {
-            gamePane.setStyle("-fx-background-color: #8abf49");
-            questionPane.setStyle("-fx-background-color: #f0fbd3");
+            gamePane.setStyle("-fx-background-image: url('/images/green_fight1.jpg'); -fx-background-size: 1080 640; -fx-background-position: center center;");
+            questionPane.setStyle("-fx-background-color: rgba(133, 214, 134, 0.50)");
         }else  {
-            gamePane.setStyle("-fx-background-color: #e5417e");
-            questionPane.setStyle("-fx-background-color: #ffedf1");
+            gamePane.setStyle("-fx-background-image: url('/images/pink_fight.png'); -fx-background-size: 1080 640; -fx-background-position: center center;");
+            questionPane.setStyle("-fx-background-color: rgba(213, 133, 176, 0.50)");
         }
     }
 
