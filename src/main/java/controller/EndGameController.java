@@ -1,17 +1,25 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import orm.DatabaseManager;
 import orm.HighscoreDAO;
+import program.ChangePageManager;
 import program.Highscore;
 import program.User;
 
 public class EndGameController {
 
     @FXML
+    private AnchorPane endGamePane;
+
+    @FXML
     private Label showTotalScore, showOldHighScore, showOldUser, showResult, usernamePlayed, showDetailResult;
 
+    @FXML
+    private Button newGameEndButton, logoutEndButton;
 
     private DatabaseManager db;
     private HighscoreDAO highscoreDAO;
@@ -28,6 +36,16 @@ public class EndGameController {
         highscoreDAO = db.getHighscoreDAO();
         setUp();
         setStatus();
+    }
+
+    @FXML
+    private void handleLogoutButton() {
+        ChangePageManager.setUI(this.getClass(), "/UI/LoginUI.fxml");
+    }
+
+    @FXML
+    private void handleNewGameButton() {
+        ChangePageManager.setUI(this.getClass(), "/UI/SelectQuestionUI.fxml");
     }
 
     private void setUp() {
@@ -51,10 +69,12 @@ public class EndGameController {
     private void setStatus() {
         if(oldHighScore < currentScore) {
             showResult.setText("You win!");
+            endGamePane.setStyle("-fx-background-image: url('/images/win_background.png'); -fx-background-size: 1080 640; -fx-background-position: center center;");
             showDetailResult.setText(String.format("NEW High Score of %d multiplication table is %s", multiplier, currentUsername));
             highscoreDAO.updateHighScore(multiplier, currentUser, currentScore);
         } else {
             showResult.setText("You lose!");
+            endGamePane.setStyle("-fx-background-image: url('/images/lose_background.png'); -fx-background-size: 1080 640; -fx-background-position: center center;");
             showDetailResult.setText(String.format("You can't BEAT %s in %d multiplication table.", oldUsername, multiplier));
         }
     }

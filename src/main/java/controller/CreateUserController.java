@@ -87,9 +87,13 @@ public class CreateUserController {
     public void handleSubmitCreateButton() throws SQLException {
         if(checkTextNotEmpty()) {
             username = usernameInput.getText().trim();
-            sailorColor = selectSailor.getSelectionModel().getSelectedItem().toString();
-            userDAO.createUser(username, sailorColor);
-            setBackAction();
+            if(checkLengthUser(username)){
+                sailorColor = selectSailor.getSelectionModel().getSelectedItem().toString();
+                userDAO.createUser(username, sailorColor);
+                setBackAction();
+            }else {
+                usernameInput.clear();
+            }
         }
     }
 
@@ -104,6 +108,17 @@ public class CreateUserController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setContentText("Please, enter your username");
+            alert.showAndWait();
+            return false;
+        }
+        return true;
+    }
+
+    private boolean checkLengthUser(String username) {
+        if(username.length() > 10) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Please, define your name again");
+            alert.setContentText("Username length can not be over 10 characters");
             alert.showAndWait();
             return false;
         }

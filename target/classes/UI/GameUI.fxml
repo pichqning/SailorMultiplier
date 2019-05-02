@@ -7,8 +7,8 @@
 
 <AnchorPane fx:id="gamePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GameController">
    <children>
-      <Text layoutX="846.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" />
-      <Text layoutX="166.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score" />
+      <Text fx:id="timeText" layoutX="818.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" />
+      <Text fx:id="scoreText" layoutX="155.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score" />
       <AnchorPane fx:id="answerPane" layoutX="100.0" layoutY="189.0" prefHeight="409.0" prefWidth="878.0">
          <children>
             <Button fx:id="ans1" layoutX="82.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleAnswerButton" prefHeight="95.0" prefWidth="306.0" text="Button" />
@@ -23,7 +23,7 @@
          </children>
       </AnchorPane>
       <Label fx:id="usernameGame" layoutX="40.0" layoutY="29.0" prefHeight="17.0" prefWidth="174.0" text="Username" />
-      <Label fx:id="scoreGame" layoutX="214.0" layoutY="62.0" text="0" />
-      <Label fx:id="timeGame" layoutX="889.0" layoutY="62.0" text="0.00" />
+      <Label fx:id="scoreGame" layoutX="255.0" layoutY="62.0" text="0" />
+      <Label fx:id="timeGame" layoutX="920.0" layoutY="62.0" text="0.00" />
    </children>
 </AnchorPane>

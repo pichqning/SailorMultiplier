@@ -1,8 +1,8 @@
-@font-face {
-    /*src: url("/font/QuiteMagical.ttf");*/
-    src: url("/font/ElsieSwashCaps.ttf");
+/*@font-face {*/
+/*    !*src: url("/font/QuiteMagical.ttf");*!*/
+/*    src: url("/font/ElsieSwashCaps.ttf");*/
 
-}
+/*}*/
 
 /*@font-face {*/
 /*    src: url("../font/ElsieSwashCaps-Black.ttf")*/
@@ -341,12 +341,118 @@
     -fx-background-color: #72d6c9;
 }
 
+#ans1:hover {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #7189bf;
+    -fx-text-fill: #7189bf;
+    -fx-border-width: 2;
+}
+
+#ans2:hover {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #df7599;
+    -fx-text-fill: #df7599;
+    -fx-border-width: 2;
+}
+
+#ans3:hover {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ffc785;
+    -fx-text-fill: #ffc785;
+    -fx-border-width: 2;
+}
+
+#ans4:hover {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #7189bf;
+    -fx-text-fill: #7189bf;
+    -fx-border-width: 2;
+}
+
+
 #answerPane {
     -fx-background-color: rgba(255, 255, 255, 0.62);
-
 }
 
 #usernameGame {
+    -fx-font-size: 40px;
+    -fx-text-fill: #8f1537;
+    -fx-font-style: bold;
+}
+
+#scoreText, #timeText {
+    -fx-font-size: 20px;
+}
+
+#scoreGame, #timeGame {
+    -fx-font-size: 35px;
+}
+
+/*end game page*/
+#endGamePane {
+    -fx-font-family: "Elsie Swash Caps";
+}
+
+#endGameDetailPane {
+    -fx-background-color: rgba(255, 255, 255, 0.62);
+}
+
+#usernamePlayed {
+    -fx-alignment: center;
+    -fx-font-size: 50px;
+    -fx-text-fill: linear-gradient(to bottom, #444444, black);
+    -fx-border-color: black;
+}
+
+#scoreText {
+    -fx-alignment: center;
+    -fx-font-size: 20px;
+    -fx-text-fill: #8f1537;
+}
+
+#showTotalScore {
+    -fx-alignment: center;
+    -fx-font-size: 60px;
+}
+
+#oldHighScorePane {
+
+}
+
+#highScoreText {
+    -fx-font-size: 30px;
+}
+
+#showOldHighScore {
+    -fx-font-size: 40px;
+    -fx-alignment: center;
+    -fx-text-fill: #8f1537;
+}
+
+#byText {
+    -fx-font-size: 20px;
+}
+
+#showOldUser {
+    -fx-font-size: 25px;
+}
+
+#showResult {
+    -fx-alignment: center;
+    -fx-font-size: 40px;
+}
+
+#showDetailResult {
+    -fx-alignment: center;
+    -fx-font-size: 25px;
+}
+
+#newGameEndButton, #logoutEndButton {
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+}
+
+#newGameEndButton {
 
 }
 

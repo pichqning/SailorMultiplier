@@ -32,7 +32,7 @@ public class Main extends Application {
             Scene scene = new Scene(root);
 
             scene.getStylesheets().add("css/style.css");
-            Font.loadFont(getClass().getResource("/font/ElsieSwashCaps.ttf").toExternalForm(), 10);
+            Font.loadFont(getClass().getResourceAsStream("/font/ElsieSwashCaps.ttf"), 16);
             uiStage.setScene(scene);
             uiStage.setResizable(false);
             uiStage.setTitle("Sailor Multiplier");

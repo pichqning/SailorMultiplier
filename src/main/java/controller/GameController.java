@@ -51,7 +51,7 @@ public class GameController {
         multiplier = Integer.parseInt(SelectQuestionController.getId());
         game = Game.getInstance(multiplier);
         setUp();
-//        start();
+        start();
     }
 
     @FXML
@@ -84,7 +84,7 @@ public class GameController {
 
 
     private void start() {
-        int secs = 11;
+        int secs = 10;
 
         int delay = 1000;
         int period = 1000;

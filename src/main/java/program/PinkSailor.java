@@ -1,6 +1,6 @@
 package program;
 
 
-public class PinkSailor implements SailorCharacter{
+public class PinkSailor {
 
 }

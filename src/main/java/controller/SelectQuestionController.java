@@ -37,7 +37,6 @@ public class SelectQuestionController {
     private DatabaseManager db;
     private HighscoreDAO highscoreDAO;
     private User user;
-    private Stage stage;
 
     private static String id;
 
@@ -56,13 +55,11 @@ public class SelectQuestionController {
         Button buttonClick = (Button) e.getSource();
         buttonClick.setText("Go");
         id = splitButtonName(buttonClick.getId());
-        stage = new Stage();
         ChangePageManager.setUI(this.getClass(), "/UI/GameUI.fxml");
     }
 
     @FXML
     private void handleLogoutButton() {
-        stage = new Stage();
         ChangePageManager.setUI(this.getClass(), "/UI/LoginUI.fxml");
     }
 
@@ -122,4 +119,5 @@ public class SelectQuestionController {
             imgSailorContainer.setStyle("-fx-background-image: url('/images/pink_sailor_login.png'); -fx-background-size: 262 460; -fx-background-repeat: no-repeat;");
         }
     }
+
 }
