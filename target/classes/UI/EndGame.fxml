@@ -9,17 +9,22 @@
    <children>
       <AnchorPane fx:id="endGameDetailPane" layoutX="77.0" layoutY="56.0" prefHeight="484.0" prefWidth="926.0">
          <children>
-            <Label fx:id="showTotalScore" layoutX="7.0" layoutY="111.0" prefHeight="47.0" prefWidth="914.0" text="Label" />
-            <Text fx:id="scoreText" layoutX="180.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCORE" wrappingWidth="245.36293029785156" />
-            <Label fx:id="showResult" layoutX="543.0" layoutY="254.0" prefHeight="66.0" prefWidth="275.0" text="Label" />
+            <Text fx:id="scoreText" layoutX="133.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCORE" wrappingWidth="245.36293029785156" />
+            <Label fx:id="showResult" layoutX="501.0" layoutY="270.0" prefHeight="66.0" prefWidth="275.0" text="Label" />
             <Label fx:id="usernamePlayed" layoutX="7.0" layoutY="21.0" prefHeight="46.0" prefWidth="914.0" text="Label" />
-            <Label fx:id="showDetailResult" layoutX="391.0" layoutY="338.0" prefHeight="127.0" prefWidth="519.0" text="Label" />
+            <Label fx:id="showDetailResult" layoutX="385.0" layoutY="334.0" prefHeight="46.0" prefWidth="517.0" text="Label" />
             <AnchorPane fx:id="oldHighScorePane" layoutX="35.0" layoutY="242.0" prefHeight="227.0" prefWidth="304.0">
                <children>
-                  <Label fx:id="showOldHighScore" layoutX="8.0" layoutY="67.0" prefHeight="47.0" prefWidth="294.0" text="Label" />
-                  <Label fx:id="showOldUser" layoutX="8.0" layoutY="173.0" prefHeight="27.0" prefWidth="294.0" text="Label" />
-                  <Text fx:id="highScoreText" layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High Score" wrappingWidth="294.0000146627426" />
-                  <Text fx:id="byText" layoutX="5.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By" wrappingWidth="65.59599304199219" />
+                  <Label fx:id="showOldHighScore" layoutX="12.0" layoutY="52.0" prefHeight="47.0" prefWidth="294.0" text="Label" />
+                  <Label fx:id="showOldUser" layoutX="8.0" layoutY="166.0" prefHeight="27.0" prefWidth="294.0" text="Label" />
+                  <Text fx:id="highScoreText" layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High Score" wrappingWidth="294.0000146627426" />
+                  <Text fx:id="byText" layoutX="8.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By" wrappingWidth="65.59599304199219" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ribbonPane" layoutX="704.0" layoutY="242.0" prefHeight="80.0" prefWidth="93.0" />
+            <AnchorPane fx:id="ribbonScorePane" layoutX="151.0" layoutY="98.0" prefHeight="157.0" prefWidth="637.0">
+               <children>
+                  <Label fx:id="showTotalScore" layoutX="-2.0" layoutY="13.0" prefHeight="47.0" prefWidth="638.0" text="Label" />
                </children>
             </AnchorPane>
          </children>

@@ -11,6 +11,8 @@ import orm.HighscoreDAO;
 import orm.UserDAO;
 import program.ChangePageManager;
 
+import java.io.File;
+
 public class Main extends Application {
 
     private static Stage uiStage;
@@ -28,7 +30,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         uiStage = primaryStage;
         try {
-            Parent root = (Parent) FXMLLoader.load(getClass().getResource("/UI/LoginUI.fxml"));
+            Parent root = (Parent) FXMLLoader.load(getClass().getResource("/UI/WelcomeUI.fxml"));
             Scene scene = new Scene(root);
 
             scene.getStylesheets().add("css/style.css");

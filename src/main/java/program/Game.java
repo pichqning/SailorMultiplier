@@ -1,10 +1,7 @@
 package program;
 
-import program.Question;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Create Game for Each Multiplier
@@ -67,17 +64,15 @@ public class Game {
         answerList.remove(0);
         return a;
     }
+
     /**
      * add question to the list for displayed in the UI
      */
     public void addQuestion () {
-//        while (Timer.canPlay) {
             Question q = new Question(multiplier);
             System.out.println(q.toString());
             questionList.add(q);
             this.addAnswer(q);
-//        }
-//        questionList.clear();
     }
 
     /**
@@ -121,7 +116,7 @@ public class Game {
             score += 20;
             correct += 1;
         }
-        else if (score < 0) score = 0;
+        else if (score <= 0) score = 0;
         else {score -= 10 ; wrong += 1 ;}
     }
 

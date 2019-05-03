@@ -27,17 +27,5 @@ public class ChangePageManager {
         }
     }
 
-    public static void changeUI(String fxmlPath, Pane pane) {
-        try {
-            URL url = ChangePageManager.class.getClassLoader().getResource(fxmlPath);
-            AnchorPane anotherPane = (AnchorPane) FXMLLoader.load(url);
-            pane.getChildren().setAll(anotherPane);
-        }catch (IOException | NullPointerException e){
-            e.printStackTrace();
-        }
-    }
-
-
-
 
 }

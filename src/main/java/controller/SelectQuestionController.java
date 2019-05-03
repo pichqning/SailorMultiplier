@@ -4,14 +4,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 import orm.DatabaseManager;
 import orm.HighscoreDAO;
 import program.ChangePageManager;
-import program.Highscore;
 import program.User;
 
 public class SelectQuestionController {

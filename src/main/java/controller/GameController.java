@@ -5,7 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import orm.DatabaseManager;
 import orm.HighscoreDAO;
@@ -84,7 +83,7 @@ public class GameController {
 
 
     private void start() {
-        int secs = 10;
+        int secs = 11;
 
         int delay = 1000;
         int period = 1000;
@@ -94,17 +93,16 @@ public class GameController {
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
+                System.out.println(setInterval());
                 Platform.runLater(() ->{
                     timeGame.setText(String.valueOf(interval));
                     if(interval < 1){
                         ChangePageManager.setUI(this.getClass(), "/UI/EndGame.fxml");
                     }
                 });
-                System.out.println(setInterval());
             }
         }, delay, period);
     }
-
 
     private final int setInterval() {
         if (interval == 1) {
@@ -118,7 +116,6 @@ public class GameController {
         String q = game.getQuestion();
         question.setText(q);
 
-        List<Integer> choiceList = game.getChoiceList();
         List<Integer> randomList = new ArrayList<>();
 
         Random r = new Random();

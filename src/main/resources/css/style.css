@@ -1,26 +1,10 @@
-/*@font-face {*/
-/*    !*src: url("/font/QuiteMagical.ttf");*!*/
-/*    src: url("/font/ElsieSwashCaps.ttf");*/
-
-/*}*/
-
-/*@font-face {*/
-/*    src: url("../font/ElsieSwashCaps-Black.ttf")*/
-/*}*/
-
-/*@font-face {*/
-/*    src: url("../font/ElsieSwashCaps.ttf")*/
-/*}*/
-
-
-
 /*login page*/
 #loginPane {
-    /*-fx-background-image: url("/images/rainbow_background.jpg");*/
     -fx-font-family: "Elsie Swash Caps";
-    -fx-background-color: #ffffff;
+    -fx-background-image: url("/images/logo.png");
+    -fx-opacity: 0.7;
     -fx-background-position: center center;
-    -fx-background-size: 1080 640;
+    -fx-background-size: auto;
 }
 
 #createUserButton{
@@ -184,6 +168,7 @@
     -fx-background-image: url("/images/school_sakura.jpg");
     -fx-background-position: center center;
     -fx-background-size: 1080 640;
+    -fx-opacity: 0.9;
 }
 
 #usernameLogin {
@@ -193,7 +178,7 @@
 }
 
 #usernameShowContainer {
-    -fx-border-color: #33313b;
+    -fx-border-color: #ffb7c5;
     -fx-background-color: rgba(255, 255, 255, 0.8);
     -fx-border-radius: 0px;
     -fx-border-width: 1;
@@ -216,6 +201,7 @@
     -fx-background-size: 100 100;
     -fx-padding: 15px 25px;
     -fx-font-size: 20px;
+    -fx-opacity: 0.9;
 }
 
 #b2:hover, #b3:hover, #b4:hover, #b5:hover, #b6:hover,
@@ -224,6 +210,7 @@
     -fx-text-fill: linear-gradient(to top, #d61d4e, #dd5599);
     -fx-border-color: #ffb7c5;
     -fx-border-width: 3;
+    -fx-font-size: 23px;
 }
 
 
@@ -377,7 +364,7 @@
 #usernameGame {
     -fx-font-size: 40px;
     -fx-text-fill: #8f1537;
-    -fx-font-style: bold;
+    /*-fx-font-style: bold;*/
 }
 
 #scoreText, #timeText {
@@ -395,13 +382,15 @@
 
 #endGameDetailPane {
     -fx-background-color: rgba(255, 255, 255, 0.62);
+    -fx-border-color: #ab93c9;
 }
 
 #usernamePlayed {
     -fx-alignment: center;
     -fx-font-size: 50px;
-    -fx-text-fill: linear-gradient(to bottom, #444444, black);
+    -fx-text-fill: #ff62a5;
     -fx-border-color: black;
+    -fx-background-color: rgba(255, 255, 255, 0.43);
 }
 
 #scoreText {
@@ -412,19 +401,24 @@
 
 #showTotalScore {
     -fx-alignment: center;
-    -fx-font-size: 60px;
+    -fx-font-size: 80px;
+    -fx-text-fill: #ffffff;
 }
 
 #oldHighScorePane {
-
+    -fx-border-color: #ff62a5;
+    -fx-border-width: 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
 }
 
 #highScoreText {
     -fx-font-size: 30px;
+    -fx-text-fill: #ff62a5;
 }
 
 #showOldHighScore {
-    -fx-font-size: 40px;
+    -fx-font-size: 60px;
     -fx-alignment: center;
     -fx-text-fill: #8f1537;
 }
@@ -435,25 +429,108 @@
 
 #showOldUser {
     -fx-font-size: 25px;
+    -fx-alignment: center;
+    -fx-text-fill: #8f1537;
 }
 
 #showResult {
     -fx-alignment: center;
     -fx-font-size: 40px;
+    -fx-border-color: transparent;
+    -fx-background-color: #ff62a5;
+    -fx-text-fill: #ffffff;
 }
 
 #showDetailResult {
     -fx-alignment: center;
-    -fx-font-size: 25px;
+    -fx-font-size: 20px;
 }
 
 #newGameEndButton, #logoutEndButton {
     -fx-border-radius: 50px;
     -fx-background-radius: 50px;
+    -fx-text-fill: #393e46;
 }
 
 #newGameEndButton {
-
+    -fx-background-color: #ab93c9;
 }
 
+#newGameEndButton:hover {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ab93c9;
+    -fx-text-fill: #ab93c9;
+}
+
+#logoutEndButton {
+    -fx-background-color: #fcf594;
+}
+
+#logoutEndButton:hover {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #fcf594;
+    -fx-text-fill: #fad284;
+}
+
+#welcomeButton {
+    -fx-opacity:0.9;
+    -fx-background-color: white;
+    -fx-border-color: white;
+    -fx-border-width: 0;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-background-position: center center;
+    -fx-font-size: 40;
+}
+
+
+#Bow {
+    -fx-background-image: url("/images/logo.png");
+    -fx-background-size: contain;
+    visibility: visible;
+}
+
+#welcomeButton:hover {
+    -fx-opacity:1;
+    -fx-background-color: white;
+    -fx-border-color: pink;
+    -fx-border-width: 4;
+    -fx-background-radius: 20px;
+    -fx-background-position: center center;
+    -fx-font-size: 45;
+    -fx-font-weight: bold;
+}
+
+#WelcomePage {
+    -fx-font-family: "Elsie Swash Caps";
+    -fx-background-image: url("/images/background.jpg");
+    -fx-opacity: 0.7;
+    -fx-background-position: center center;
+    -fx-background-size: 1080 640;
+}
+
+#welcomeTag {
+    -fx-font-size: 70;
+    -fx-text-alignment: center center;
+    -fx-alignment: center;
+    -fx-opacity: 0.9;
+    }
+#welcomeTag .text {
+    -fx-stroke: #404040;
+    -fx-fill: Black;
+    -fx-stroke-width: 1px;
+}
+
+#ribbonPane {
+    -fx-background-image: url("/images/logo.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 93 80;
+}
+
+#ribbonScorePane {
+    -fx-background-image: url("/images/pink_ribbon.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 637 157;
+}
 
