@@ -49,6 +49,7 @@ public class GameController {
         setBackground(user);
         multiplier = Integer.parseInt(SelectQuestionController.getId());
         game = Game.getInstance(multiplier);
+        game.reset();
         setUp();
         start();
     }
