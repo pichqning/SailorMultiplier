@@ -84,7 +84,7 @@ public class GameController {
 
 
     private void start() {
-        int secs = 11;
+        int secs = 61;
 
         int delay = 1000;
         int period = 1000;
